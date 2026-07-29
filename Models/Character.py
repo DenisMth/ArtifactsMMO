@@ -58,11 +58,18 @@ class Character:
         rounds = 0
         char_health = self.max_hp
         monster_health = monster["hp"]
+        burn_dot = 0
+
+        for effect in self.effects:
+            if effect["code"] == "burn":
+                burn_dot = (effect["value"] * char_dmg) //100
 
         while rounds < 100 and char_health > 1:
             rounds += 1
-            monster_health -= round(char_dmg * (1 + (0.5 * (self.critical_strike/100)) ))
+            monster_health -= round(char_dmg * (1 + (0.5 * (self.critical_strike/100)) )) + burn_dot
             char_health -= round(monster_dmg * (1 + (0.5 * (monster["critical_strike"]/100))))
+
+            burn_dot -= max(burn_dot//10, 1)
 
             if monster_health <= 0:
                 return self.max_hp - char_health
@@ -116,8 +123,12 @@ class Character:
 
 
 
-    async def go_to_target(self):
-        corresponding_tile = await self.api.find_map_tile(self, self.target)
+    async def go_to_target(self, target=None):
+
+        if not target:
+            target = self.target
+
+        corresponding_tile = await self.api.find_map_tile(self, target)
 
         if self.is_on_map_tile(corresponding_tile):
             self.on_target = True
@@ -222,8 +233,7 @@ class Character:
                         amount = item["quantity"]
 
         workshop = await self.api.find_workshop(craft_elements["data"]["craft"]["skill"])
-        self.target = workshop["interactions"]["content"]["code"]
-        await self.go_to_target()
+        await self.go_to_target(workshop["interactions"]["content"]["code"])
         await self.craft(craft_elements["data"]["code"], craftable_items - 1)
         self.target = main_target
 
@@ -241,8 +251,7 @@ class Character:
         else :
             craftable_items = quantity
 
-        self.target = "bank"
-        await self.go_to_target()
+        await self.go_to_target("bank")
         if self.inventory[0]["code"] != "":
             await self.deposit()
 
@@ -259,28 +268,21 @@ class Character:
         response = await self.api.get_items(self, resources)
         await self._handle_response(response)
         workshop = await self.api.find_workshop(craft_elements["data"]["craft"]["skill"])
-        self.target = workshop["interactions"]["content"]["code"]
-        await self.go_to_target()
+        await self.go_to_target(workshop["interactions"]["content"]["code"])
         await self.craft(craft_elements["data"]["code"], craftable_items)
         return craftable_items
 
 
     async def craftcyle(self):
-        main_target = self.target
         crafted_items = await self.craft_from_bank()
-        await self.recycle(main_target, crafted_items)
-        self.target = "bank"
-        await self.go_to_target()
+        await self.recycle(self.target, crafted_items)
+        await self.go_to_target("bank")
         await self.deposit()
-        self.target = main_target
 
     async def craftstock(self, quantity=-1):
-        main_target = self.target
         crafted_items = await self.craft_from_bank(quantity)
-        self.target = "bank"
-        await self.go_to_target()
+        await self.go_to_target("bank")
         await self.deposit()
-        self.target = main_target
 
     async def move(self, x, y):
         response = await self.api.move(self, x, y)
@@ -349,31 +351,33 @@ class Character:
                 elif self.action in ["gatheraft", "gc"]:
 
                     if self.inventory[0]["code"] != "":
-                        target = self.target
                         if self.x != 4 or self.y != 1:
-                            self.target = "bank"
-                            await self.go_to_target()
+                            await self.go_to_target("bank")
                         await self.deposit()
-                        self.target = target
                     await self.gatheraft()
 
                 elif self.action in ["craft", "c"]:
                     await self.craftstock(1)
-                    self.set_action("fight", "task")
+                    self.set_action("idle", "test")
+
+                elif self.action in ["craftmass", "cm"]:
+                    await self.craftstock()
 
                 elif self.action in ["craftcycle", "cc"]:
                     await self.craftcyle()
+
+                elif self.action in ["assemble", "a"]:
+                    if self.x != 4 or self.y != 1:
+                        await self.go_to_target("spawn_bank")
+                    await self.deposit()
 
                 items_count = 0
                 for item in self.inventory:
                     items_count += item["quantity"]
 
                 if items_count == self.inventory_max_items:
-                    target = self.target
-                    self.target = "bank"
-                    await self.go_to_target()
+                    await self.go_to_target("bank")
                     await self.deposit()
-                    self.target = target
                     self.on_target = False
 
             except Exception as e:

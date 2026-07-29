@@ -41,6 +41,16 @@ class API:
         return await self._post(f"my/{character.name}/action/bank/withdraw/item", resources)
 
     async def find_map_tile(self, character, target):
+
+        char_x = character.x
+        char_y = character.y
+
+        if target == "spawn_bank":
+            target = "bank"
+
+            char_x = 4
+            char_y = 1
+
         data = {
             "content_code" : target
         }
@@ -52,7 +62,7 @@ class API:
 
         return min(
             tiles,
-            key=lambda t: (t["x"] - character.x) ** 2 + (t["y"] - character.y) ** 2
+            key=lambda t: (t["x"] - char_x) ** 2 + (t["y"] - char_y) ** 2
         )
 
 

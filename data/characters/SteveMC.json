@@ -2,13 +2,13 @@
     "name": "SteveMC",
     "account": "thesparatge",
     "skin": "men3",
-    "level": 26,
-    "xp": 11723,
-    "max_xp": 14600,
-    "gold": 0,
+    "level": 27,
+    "xp": 699,
+    "max_xp": 15800,
+    "gold": 622,
     "speed": 100,
     "mining_level": 33,
-    "mining_xp": 15330,
+    "mining_xp": 23826,
     "mining_max_xp": 24200,
     "woodcutting_level": 1,
     "woodcutting_xp": 0,
@@ -31,41 +31,41 @@
     "alchemy_level": 1,
     "alchemy_xp": 0,
     "alchemy_max_xp": 150,
-    "hp": 650,
-    "max_hp": 650,
+    "hp": 133,
+    "max_hp": 685,
     "haste": 8,
-    "critical_strike": 0,
+    "critical_strike": 5,
     "wisdom": 50,
-    "prospecting": 25,
-    "initiative": 100,
+    "prospecting": 50,
+    "initiative": 250,
     "threat": 0,
     "attack_fire": 0,
-    "attack_earth": 5,
+    "attack_earth": 0,
     "attack_water": 0,
-    "attack_air": 0,
-    "dmg": 0,
-    "dmg_fire": 35,
+    "attack_air": 40,
+    "dmg": 5,
+    "dmg_fire": 25,
     "dmg_earth": 0,
     "dmg_water": 0,
-    "dmg_air": 67,
+    "dmg_air": 75,
     "res_fire": 18,
     "res_earth": 7,
     "res_water": 15,
     "res_air": 20,
     "effects": [
         {
-            "code": "mining",
-            "value": -30
+            "code": "burn",
+            "value": 20
         }
     ],
-    "x": 5,
-    "y": -4,
-    "layer": "underground",
-    "map_id": 83,
-    "cooldown": 31,
-    "cooldown_expiration": "2026-07-29T09:51:01.827Z",
-    "weapon_slot": "steel_pickaxe",
-    "rune_slot": "",
+    "x": 8,
+    "y": 6,
+    "layer": "overworld",
+    "map_id": 601,
+    "cooldown": 17,
+    "cooldown_expiration": "2026-07-29T14:47:52.037Z",
+    "weapon_slot": "forest_whip",
+    "rune_slot": "burn_rune",
     "shield_slot": "slime_shield",
     "helmet_slot": "skeleton_helmet",
     "body_armor_slot": "skeleton_armor",
@@ -73,9 +73,9 @@
     "boots_slot": "snakeskin_boots",
     "ring1_slot": "air_ring",
     "ring2_slot": "air_ring",
-    "amulet_slot": "skull_amulet",
+    "amulet_slot": "emerald_amulet",
     "artifact1_slot": "novice_guide",
-    "artifact2_slot": "",
+    "artifact2_slot": "lich_race_medal",
     "artifact3_slot": "",
     "utility1_slot": "",
     "utility1_slot_quantity": 0,
@@ -86,37 +86,37 @@
     "task_type": "monsters",
     "task_progress": 0,
     "task_total": 204,
-    "inventory_max_items": 165,
+    "inventory_max_items": 167,
     "inventory": [
         {
             "slot": 1,
-            "code": "gold_ore",
-            "quantity": 38
+            "code": "skeleton_skull",
+            "quantity": 14
         },
         {
             "slot": 2,
-            "code": "",
-            "quantity": 0
+            "code": "steel_pickaxe",
+            "quantity": 1
         },
         {
             "slot": 3,
-            "code": "",
-            "quantity": 0
+            "code": "skull_amulet",
+            "quantity": 1
         },
         {
             "slot": 4,
-            "code": "",
-            "quantity": 0
+            "code": "event_ticket",
+            "quantity": 2
         },
         {
             "slot": 5,
-            "code": "",
-            "quantity": 0
+            "code": "skeleton_bone",
+            "quantity": 31
         },
         {
             "slot": 6,
-            "code": "",
-            "quantity": 0
+            "code": "lich_tomb_key",
+            "quantity": 5
         },
         {
             "slot": 7,
@@ -190,10 +190,10 @@
         }
     ],
     "target_coords": [
-        5,
-        -4
+        8,
+        6
     ],
     "on_target": true,
-    "min_hp_needed": 650,
+    "min_hp_needed": 273,
     "characters": null
 }

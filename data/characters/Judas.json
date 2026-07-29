@@ -10,9 +10,9 @@
     "mining_level": 30,
     "mining_xp": 1062,
     "mining_max_xp": 19700,
-    "woodcutting_level": 3,
-    "woodcutting_xp": 44,
-    "woodcutting_max_xp": 350,
+    "woodcutting_level": 8,
+    "woodcutting_xp": 712,
+    "woodcutting_max_xp": 1450,
     "fishing_level": 20,
     "fishing_xp": 1677,
     "fishing_max_xp": 8200,
@@ -67,7 +67,7 @@
     "layer": "overworld",
     "map_id": 340,
     "cooldown": 30,
-    "cooldown_expiration": "2026-07-29T09:50:55.503Z",
+    "cooldown_expiration": "2026-07-29T14:48:56.165Z",
     "weapon_slot": "spruce_fishing_rod",
     "rune_slot": "healing_aura_rune",
     "shield_slot": "slime_shield",
@@ -95,17 +95,17 @@
         {
             "slot": 1,
             "code": "ash_wood",
-            "quantity": 41
+            "quantity": 26
         },
         {
             "slot": 2,
-            "code": "apple",
-            "quantity": 5
+            "code": "sap",
+            "quantity": 3
         },
         {
             "slot": 3,
-            "code": "sap",
-            "quantity": 4
+            "code": "apple",
+            "quantity": 3
         },
         {
             "slot": 4,

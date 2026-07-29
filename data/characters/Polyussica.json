@@ -67,7 +67,7 @@
     "layer": "overworld",
     "map_id": 340,
     "cooldown": 24,
-    "cooldown_expiration": "2026-07-29T09:50:57.076Z",
+    "cooldown_expiration": "2026-07-29T14:48:53.241Z",
     "weapon_slot": "iron_axe",
     "rune_slot": "healing_aura_rune",
     "shield_slot": "slime_shield",
@@ -95,22 +95,22 @@
         {
             "slot": 1,
             "code": "ash_wood",
-            "quantity": 51
+            "quantity": 34
         },
         {
             "slot": 2,
-            "code": "apple",
-            "quantity": 5
+            "code": "sap",
+            "quantity": 10
         },
         {
             "slot": 3,
-            "code": "sap",
-            "quantity": 6
+            "code": "apple",
+            "quantity": 2
         },
         {
             "slot": 4,
-            "code": "event_ticket",
-            "quantity": 1
+            "code": "",
+            "quantity": 0
         },
         {
             "slot": 5,

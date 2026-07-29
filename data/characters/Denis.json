@@ -3,9 +3,9 @@
     "account": "thesparatge",
     "skin": "men2",
     "level": 32,
-    "xp": 9599,
+    "xp": 11414,
     "max_xp": 22700,
-    "gold": 72,
+    "gold": 312,
     "speed": 100,
     "mining_level": 5,
     "mining_xp": 607,
@@ -16,28 +16,28 @@
     "fishing_level": 1,
     "fishing_xp": 15,
     "fishing_max_xp": 150,
-    "weaponcrafting_level": 24,
-    "weaponcrafting_xp": 4422,
-    "weaponcrafting_max_xp": 12200,
-    "gearcrafting_level": 24,
-    "gearcrafting_xp": 5369,
-    "gearcrafting_max_xp": 12200,
-    "jewelrycrafting_level": 21,
-    "jewelrycrafting_xp": 212,
-    "jewelrycrafting_max_xp": 9200,
+    "weaponcrafting_level": 30,
+    "weaponcrafting_xp": 1544,
+    "weaponcrafting_max_xp": 19700,
+    "gearcrafting_level": 25,
+    "gearcrafting_xp": 4961,
+    "gearcrafting_max_xp": 13400,
+    "jewelrycrafting_level": 25,
+    "jewelrycrafting_xp": 6824,
+    "jewelrycrafting_max_xp": 13400,
     "cooking_level": 1,
     "cooking_xp": 0,
     "cooking_max_xp": 150,
     "alchemy_level": 1,
     "alchemy_xp": 0,
     "alchemy_max_xp": 150,
-    "hp": 233,
-    "max_hp": 755,
+    "hp": 72,
+    "max_hp": 785,
     "haste": 8,
     "critical_strike": 40,
     "wisdom": 100,
     "prospecting": 135,
-    "initiative": 225,
+    "initiative": 275,
     "threat": 6,
     "attack_fire": 0,
     "attack_earth": 36,
@@ -45,8 +45,8 @@
     "attack_air": 0,
     "dmg": 41,
     "dmg_fire": 0,
-    "dmg_earth": 51,
-    "dmg_water": 35,
+    "dmg_earth": 59,
+    "dmg_water": 25,
     "dmg_air": 0,
     "res_fire": 15,
     "res_earth": 20,
@@ -58,12 +58,12 @@
             "value": 20
         }
     ],
-    "x": -3,
-    "y": 12,
+    "x": 8,
+    "y": 7,
     "layer": "overworld",
-    "map_id": 874,
-    "cooldown": 24,
-    "cooldown_expiration": "2026-07-29T09:50:45.935Z",
+    "map_id": 652,
+    "cooldown": 28,
+    "cooldown_expiration": "2026-07-29T14:48:25.084Z",
     "weapon_slot": "wooden_club",
     "rune_slot": "burn_rune",
     "shield_slot": "slime_shield",
@@ -73,45 +73,45 @@
     "boots_slot": "steel_boots",
     "ring1_slot": "ring_of_the_adept",
     "ring2_slot": "ring_of_the_adept",
-    "amulet_slot": "dreadful_amulet",
+    "amulet_slot": "topaz_amulet",
     "artifact1_slot": "lich_race_trophy",
     "artifact2_slot": "lost_world_map",
     "artifact3_slot": "lich_race_medal",
-    "utility1_slot": "",
-    "utility1_slot_quantity": 0,
+    "utility1_slot": "earth_boost_potion",
+    "utility1_slot_quantity": 44,
     "utility2_slot": "",
     "utility2_slot_quantity": 0,
     "bag_slot": "satchel",
-    "task": "spider",
+    "task": "ogre",
     "task_type": "monsters",
-    "task_progress": 258,
-    "task_total": 293,
+    "task_progress": 7,
+    "task_total": 91,
     "inventory_max_items": 177,
     "inventory": [
         {
             "slot": 1,
-            "code": "",
-            "quantity": 0
+            "code": "skeleton_skull",
+            "quantity": 4
         },
         {
             "slot": 2,
-            "code": "",
-            "quantity": 0
+            "code": "skeleton_bone",
+            "quantity": 2
         },
         {
             "slot": 3,
-            "code": "",
-            "quantity": 0
+            "code": "lich_tomb_key",
+            "quantity": 5
         },
         {
             "slot": 4,
-            "code": "",
-            "quantity": 0
+            "code": "raw_chicken",
+            "quantity": 1
         },
         {
             "slot": 5,
-            "code": "",
-            "quantity": 0
+            "code": "red_cloth",
+            "quantity": 1
         },
         {
             "slot": 6,
@@ -190,10 +190,10 @@
         }
     ],
     "target_coords": [
-        -3,
-        12
+        8,
+        7
     ],
-    "on_target": true,
-    "min_hp_needed": 483,
+    "on_target": false,
+    "min_hp_needed": 776,
     "characters": null
 }
