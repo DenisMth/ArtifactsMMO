@@ -1,0 +1,194 @@
+{
+    "name": "Chuck",
+    "account": "thesparatge",
+    "skin": "men3",
+    "level": 27,
+    "xp": 10449,
+    "max_xp": 15800,
+    "gold": 129,
+    "speed": 100,
+    "mining_level": 1,
+    "mining_xp": 13,
+    "mining_max_xp": 150,
+    "woodcutting_level": 31,
+    "woodcutting_xp": 419,
+    "woodcutting_max_xp": 21200,
+    "fishing_level": 1,
+    "fishing_xp": 0,
+    "fishing_max_xp": 150,
+    "weaponcrafting_level": 1,
+    "weaponcrafting_xp": 0,
+    "weaponcrafting_max_xp": 150,
+    "gearcrafting_level": 1,
+    "gearcrafting_xp": 0,
+    "gearcrafting_max_xp": 150,
+    "jewelrycrafting_level": 1,
+    "jewelrycrafting_xp": 0,
+    "jewelrycrafting_max_xp": 150,
+    "cooking_level": 1,
+    "cooking_xp": 0,
+    "cooking_max_xp": 150,
+    "alchemy_level": 1,
+    "alchemy_xp": 0,
+    "alchemy_max_xp": 150,
+    "hp": 7,
+    "max_hp": 655,
+    "haste": 8,
+    "critical_strike": 5,
+    "wisdom": 110,
+    "prospecting": 25,
+    "initiative": 250,
+    "threat": 0,
+    "attack_fire": 0,
+    "attack_earth": 0,
+    "attack_water": 40,
+    "attack_air": 0,
+    "dmg": 12,
+    "dmg_fire": 0,
+    "dmg_earth": 35,
+    "dmg_water": 51,
+    "dmg_air": 0,
+    "res_fire": 15,
+    "res_earth": 20,
+    "res_water": 18,
+    "res_air": 7,
+    "effects": [],
+    "x": -2,
+    "y": 12,
+    "layer": "interior",
+    "map_id": 879,
+    "cooldown": 46,
+    "cooldown_expiration": "2026-07-29T09:50:32.848Z",
+    "weapon_slot": "battlestaff",
+    "rune_slot": "",
+    "shield_slot": "slime_shield",
+    "helmet_slot": "magic_wizard_hat",
+    "body_armor_slot": "steel_armor",
+    "leg_armor_slot": "steel_legs_armor",
+    "boots_slot": "steel_boots",
+    "ring1_slot": "steel_ring",
+    "ring2_slot": "steel_ring",
+    "amulet_slot": "dreadful_amulet",
+    "artifact1_slot": "novice_guide",
+    "artifact2_slot": "",
+    "artifact3_slot": "",
+    "utility1_slot": "",
+    "utility1_slot_quantity": 0,
+    "utility2_slot": "",
+    "utility2_slot_quantity": 0,
+    "bag_slot": "satchel",
+    "task": "rat",
+    "task_type": "monsters",
+    "task_progress": 135,
+    "task_total": 147,
+    "inventory_max_items": 167,
+    "inventory": [
+        {
+            "slot": 1,
+            "code": "raw_rat_meat",
+            "quantity": 11
+        },
+        {
+            "slot": 2,
+            "code": "rat_hide",
+            "quantity": 7
+        },
+        {
+            "slot": 3,
+            "code": "steel_axe",
+            "quantity": 1
+        },
+        {
+            "slot": 4,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 5,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 6,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 7,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 8,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 9,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 10,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 11,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 12,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 13,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 14,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 15,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 16,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 17,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 18,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 19,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 20,
+            "code": "",
+            "quantity": 0
+        }
+    ],
+    "target_coords": [
+        -2,
+        12
+    ],
+    "on_target": true,
+    "min_hp_needed": 676,
+    "characters": null
+}

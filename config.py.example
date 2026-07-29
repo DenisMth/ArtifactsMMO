@@ -1,0 +1,2 @@
+TOKEN = "MY_TOKEN"
+base_url = "https://api.artifactsmmo.com/"

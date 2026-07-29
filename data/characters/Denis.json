@@ -1,0 +1,199 @@
+{
+    "name": "Denis",
+    "account": "thesparatge",
+    "skin": "men2",
+    "level": 32,
+    "xp": 9599,
+    "max_xp": 22700,
+    "gold": 72,
+    "speed": 100,
+    "mining_level": 5,
+    "mining_xp": 607,
+    "mining_max_xp": 700,
+    "woodcutting_level": 1,
+    "woodcutting_xp": 0,
+    "woodcutting_max_xp": 150,
+    "fishing_level": 1,
+    "fishing_xp": 15,
+    "fishing_max_xp": 150,
+    "weaponcrafting_level": 24,
+    "weaponcrafting_xp": 4422,
+    "weaponcrafting_max_xp": 12200,
+    "gearcrafting_level": 24,
+    "gearcrafting_xp": 5369,
+    "gearcrafting_max_xp": 12200,
+    "jewelrycrafting_level": 21,
+    "jewelrycrafting_xp": 212,
+    "jewelrycrafting_max_xp": 9200,
+    "cooking_level": 1,
+    "cooking_xp": 0,
+    "cooking_max_xp": 150,
+    "alchemy_level": 1,
+    "alchemy_xp": 0,
+    "alchemy_max_xp": 150,
+    "hp": 233,
+    "max_hp": 755,
+    "haste": 8,
+    "critical_strike": 40,
+    "wisdom": 100,
+    "prospecting": 135,
+    "initiative": 225,
+    "threat": 6,
+    "attack_fire": 0,
+    "attack_earth": 36,
+    "attack_water": 0,
+    "attack_air": 0,
+    "dmg": 41,
+    "dmg_fire": 0,
+    "dmg_earth": 51,
+    "dmg_water": 35,
+    "dmg_air": 0,
+    "res_fire": 15,
+    "res_earth": 20,
+    "res_water": 18,
+    "res_air": 7,
+    "effects": [
+        {
+            "code": "burn",
+            "value": 20
+        }
+    ],
+    "x": -3,
+    "y": 12,
+    "layer": "overworld",
+    "map_id": 874,
+    "cooldown": 24,
+    "cooldown_expiration": "2026-07-29T09:50:45.935Z",
+    "weapon_slot": "wooden_club",
+    "rune_slot": "burn_rune",
+    "shield_slot": "slime_shield",
+    "helmet_slot": "steel_helm",
+    "body_armor_slot": "steel_armor",
+    "leg_armor_slot": "steel_legs_armor",
+    "boots_slot": "steel_boots",
+    "ring1_slot": "ring_of_the_adept",
+    "ring2_slot": "ring_of_the_adept",
+    "amulet_slot": "dreadful_amulet",
+    "artifact1_slot": "lich_race_trophy",
+    "artifact2_slot": "lost_world_map",
+    "artifact3_slot": "lich_race_medal",
+    "utility1_slot": "",
+    "utility1_slot_quantity": 0,
+    "utility2_slot": "",
+    "utility2_slot_quantity": 0,
+    "bag_slot": "satchel",
+    "task": "spider",
+    "task_type": "monsters",
+    "task_progress": 258,
+    "task_total": 293,
+    "inventory_max_items": 177,
+    "inventory": [
+        {
+            "slot": 1,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 2,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 3,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 4,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 5,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 6,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 7,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 8,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 9,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 10,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 11,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 12,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 13,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 14,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 15,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 16,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 17,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 18,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 19,
+            "code": "",
+            "quantity": 0
+        },
+        {
+            "slot": 20,
+            "code": "",
+            "quantity": 0
+        }
+    ],
+    "target_coords": [
+        -3,
+        12
+    ],
+    "on_target": true,
+    "min_hp_needed": 483,
+    "characters": null
+}
