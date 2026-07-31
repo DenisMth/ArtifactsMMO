@@ -11,16 +11,26 @@ class Character:
         self.api = api
         self.update(data)
 
-        self.action = "idle"
+        self.action = "init"
         self.target = None
+        self.option = None
         self.target_coords = None
         self.on_target = False
         self.min_hp_needed = self.max_hp
 
-    def set_action(self, action, target, characters = None):
+    async def set_action(self, action, target, characters = None, option = None):
         print(f"{self.name}: action changed from {self.action} {self.target} to {action} {target}")
+        if self.action == "idle":
+            response = await self.api.get_characters()
+            update_char = next(
+                (character for character in response["data"] if character["name"] == self.name),
+                None
+            )
+
+            self.update(update_char)
         self.action = action
         self.target = target
+        self.option = option
         self.characters = characters
         self.target_coords = None
         self.on_target = False
@@ -157,7 +167,7 @@ class Character:
 
     async def boss_fight(self, characters):
 
-        if self.hp < 200:
+        if self.hp < 500:
             await self.rest()
 
         response = await self.api.boss_fight(characters)
@@ -178,7 +188,7 @@ class Character:
 
             self.min_hp_needed = await self.fight_hp_needed()
             if self.min_hp_needed < 0:
-                self.set_action("fight", "chicken")
+                await self.set_action("fight", "chicken")
 
             await self.go_to_target()
 
@@ -193,7 +203,7 @@ class Character:
                 await self.move(1, 2)
                 await self.complete_task()
                 await self.accept_task()
-                self.set_action("fight", "task")
+                await self.set_action("fight", "task")
 
     async def rest(self):
         response = await self.api.rest(self)
@@ -279,7 +289,7 @@ class Character:
         await self.go_to_target("bank")
         await self.deposit()
 
-    async def craftstock(self, quantity=-1):
+    async def craftstock(self, quantity=1):
         crafted_items = await self.craft_from_bank(quantity)
         await self.go_to_target("bank")
         await self.deposit()
@@ -322,7 +332,7 @@ class Character:
         data = {
             key: value
             for key, value in self.__dict__.items()
-            if key not in {"api", "action", "target"}
+            if key not in {"api", "action", "target", "option"}
         }
 
         Path("data/characters").mkdir(exist_ok=True)
@@ -332,11 +342,14 @@ class Character:
 
     async def run(self):
 
+        max_retries = 2
+        retries = 0
+
         while True:
 
             try:
 
-                if self.action in ["idle", "i"]:
+                if self.action in ["idle", "init", "i"]:
                     await asyncio.sleep(1)
 
                 elif self.action in ["fight", "f"]:
@@ -357,11 +370,15 @@ class Character:
                     await self.gatheraft()
 
                 elif self.action in ["craft", "c"]:
-                    await self.craftstock(1)
-                    self.set_action("idle", "test")
+                    await (
+                        self.craftstock()
+                        if self.option is None
+                        else self.craftstock(int(self.option))
+                    )
+                    await self.set_action("idle", "test")
 
                 elif self.action in ["craftmass", "cm"]:
-                    await self.craftstock()
+                    await self.craftstock(-1)
 
                 elif self.action in ["craftcycle", "cc"]:
                     await self.craftcyle()
@@ -369,7 +386,9 @@ class Character:
                 elif self.action in ["assemble", "a"]:
                     if self.x != 4 or self.y != 1:
                         await self.go_to_target("spawn_bank")
-                    await self.deposit()
+                    if self.inventory[0]["code"] != "":
+                        await self.deposit()
+                    await self.set_action("idle", "test")
 
                 items_count = 0
                 for item in self.inventory:
@@ -380,7 +399,17 @@ class Character:
                     await self.deposit()
                     self.on_target = False
 
+                retries = 0
+
             except Exception as e:
                 import traceback
                 traceback.print_exc()
+
+                retries += 1
+
+                if retries >= max_retries:
+                    print("Too many errors. Switching to idle.")
+                    await self.set_action("idle", "error")
+                    retries = 0
+
                 await asyncio.sleep(2)

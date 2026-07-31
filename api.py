@@ -24,14 +24,20 @@ class API:
 
     async def _post(self, endpoint, data=None):
         response = await self.client.post(endpoint, json=data)
-        # print(response.json())
-        response.raise_for_status()
+        try:
+            response.raise_for_status()
+        except httpx.HTTPStatusError:
+            print(response.json())
+            raise
         return response.json()
     
     async def _get(self, endpoint, data=None):
         response = await self.client.get(endpoint, params=data)
-        # print(response.json())
-        response.raise_for_status()
+        try:
+            response.raise_for_status()
+        except httpx.HTTPStatusError:
+            print(response.json())
+            raise
         return response.json()
 
     async def get_characters(self):

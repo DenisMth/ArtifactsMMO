@@ -15,12 +15,13 @@ class CharactersController:
         name = parts[0]
         action = parts[1]
         target = parts[2]
+        option = parts[3] if len(parts) > 3 else None
 
         if action in ["bf", "bossfight"]:
 
             characters = name.split(",")
             character = self.characters.get(characters[0])
-            character.set_action(action, target, characters)
+            await character.set_action(action, target, characters)
 
         else:
 
@@ -29,11 +30,11 @@ class CharactersController:
                 for char in name.split(","):
 
                     character = self.characters.get(char)
-                    character.set_action(action, target)
+                    await character.set_action(action, target, None, option)
 
             else:
                 for character in self.characters.values():
-                    character.set_action(action, target)
+                    await character.set_action(action, target, None, option)
 
     async def load(self):
         response = await self.api.get_characters()
