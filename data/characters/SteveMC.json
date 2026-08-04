@@ -7,9 +7,9 @@
     "max_xp": 19700,
     "gold": 0,
     "speed": 100,
-    "mining_level": 46,
-    "mining_xp": 48644,
-    "mining_max_xp": 48800,
+    "mining_level": 47,
+    "mining_xp": 9384,
+    "mining_max_xp": 50600,
     "woodcutting_level": 1,
     "woodcutting_xp": 0,
     "woodcutting_max_xp": 150,
@@ -66,8 +66,8 @@
     "y": 1,
     "layer": "overworld",
     "map_id": 334,
-    "cooldown": 3,
-    "cooldown_expiration": "2026-08-04T12:59:06.857Z",
+    "cooldown": 24,
+    "cooldown_expiration": "2026-08-04T14:36:26.314Z",
     "weapon_slot": "steel_pickaxe",
     "rune_slot": "burn_rune",
     "shield_slot": "slime_shield",
@@ -99,8 +99,8 @@
         },
         {
             "slot": 2,
-            "code": "steel_ring",
-            "quantity": 2
+            "code": "",
+            "quantity": 0
         },
         {
             "slot": 3,
@@ -193,8 +193,11 @@
             "quantity": 0
         }
     ],
-    "target_coords": null,
-    "on_target": false,
+    "target_coords": [
+        4,
+        1
+    ],
+    "on_target": true,
     "min_hp_needed": 710,
     "characters": null
 }

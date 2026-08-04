@@ -10,8 +10,10 @@ async def main():
 
     controller = CharactersController(api)
 
+    app = create_app(controller)
+
     config = uvicorn.Config(
-        app=create_app(controller),
+        app=app,
         host="0.0.0.0",
         port=8000,
         log_level="info",
@@ -20,8 +22,6 @@ async def main():
     server = uvicorn.Server(config)
 
     await controller.load()
-
-    create_app(controller)
 
     results = await asyncio.gather(
         *(c.run() for c in controller.characters.values()),

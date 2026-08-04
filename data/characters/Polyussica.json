@@ -5,7 +5,7 @@
     "level": 35,
     "xp": 25525,
     "max_xp": 27500,
-    "gold": 0,
+    "gold": 83,
     "speed": 100,
     "mining_level": 1,
     "mining_xp": 14,
@@ -31,7 +31,7 @@
     "alchemy_level": 43,
     "alchemy_xp": 32456,
     "alchemy_max_xp": 42800,
-    "hp": 1070,
+    "hp": 269,
     "max_hp": 1070,
     "haste": 12,
     "critical_strike": 10,
@@ -58,12 +58,12 @@
             "value": 10
         }
     ],
-    "x": 4,
+    "x": 0,
     "y": 1,
     "layer": "overworld",
-    "map_id": 334,
-    "cooldown": 3,
-    "cooldown_expiration": "2026-08-04T12:59:17.402Z",
+    "map_id": 322,
+    "cooldown": 5,
+    "cooldown_expiration": "2026-08-04T14:36:46.491Z",
     "weapon_slot": "elderwood_staff",
     "rune_slot": "healing_aura_rune",
     "shield_slot": "slime_shield",
@@ -82,31 +82,31 @@
     "utility2_slot": "",
     "utility2_slot_quantity": 0,
     "bag_slot": "backpack",
-    "task": "spider",
+    "task": "chicken",
     "task_type": "monsters",
-    "task_progress": 91,
-    "task_total": 202,
+    "task_progress": 274,
+    "task_total": 309,
     "inventory_max_items": 203,
     "inventory": [
         {
             "slot": 1,
-            "code": "",
-            "quantity": 0
+            "code": "raw_chicken",
+            "quantity": 42
         },
         {
             "slot": 2,
-            "code": "ring_of_the_adept",
-            "quantity": 1
+            "code": "feather",
+            "quantity": 10
         },
         {
             "slot": 3,
-            "code": "ring_of_chance",
-            "quantity": 1
+            "code": "egg",
+            "quantity": 4
         },
         {
             "slot": 4,
-            "code": "",
-            "quantity": 0
+            "code": "event_ticket",
+            "quantity": 3
         },
         {
             "slot": 5,
@@ -189,8 +189,11 @@
             "quantity": 0
         }
     ],
-    "target_coords": null,
-    "on_target": false,
-    "min_hp_needed": 1010,
+    "target_coords": [
+        0,
+        1
+    ],
+    "on_target": true,
+    "min_hp_needed": 3,
     "characters": null
 }

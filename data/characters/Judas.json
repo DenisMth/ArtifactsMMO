@@ -3,9 +3,9 @@
     "account": "thesparatge",
     "skin": "men3",
     "level": 30,
-    "xp": 14120,
+    "xp": 18784,
     "max_xp": 19700,
-    "gold": 0,
+    "gold": 296,
     "speed": 100,
     "mining_level": 30,
     "mining_xp": 1062,
@@ -31,7 +31,7 @@
     "alchemy_level": 1,
     "alchemy_xp": 0,
     "alchemy_max_xp": 150,
-    "hp": 1100,
+    "hp": 369,
     "max_hp": 1100,
     "haste": 12,
     "critical_strike": 29,
@@ -58,12 +58,12 @@
             "value": 10
         }
     ],
-    "x": 4,
-    "y": 1,
+    "x": 0,
+    "y": 12,
     "layer": "overworld",
-    "map_id": 334,
-    "cooldown": 3,
-    "cooldown_expiration": "2026-08-04T12:59:28.361Z",
+    "map_id": 883,
+    "cooldown": 65,
+    "cooldown_expiration": "2026-08-04T14:35:42.336Z",
     "weapon_slot": "death_knight_sword",
     "rune_slot": "healing_aura_rune",
     "shield_slot": "slime_shield",
@@ -84,14 +84,14 @@
     "bag_slot": "backpack",
     "task": "imp",
     "task_type": "monsters",
-    "task_progress": 7,
+    "task_progress": 51,
     "task_total": 296,
     "inventory_max_items": 193,
     "inventory": [
         {
             "slot": 1,
-            "code": "",
-            "quantity": 0
+            "code": "demoniac_dust",
+            "quantity": 11
         },
         {
             "slot": 2,
@@ -100,13 +100,13 @@
         },
         {
             "slot": 3,
-            "code": "",
-            "quantity": 0
+            "code": "piece_of_obsidian",
+            "quantity": 3
         },
         {
             "slot": 4,
-            "code": "",
-            "quantity": 0
+            "code": "imp_tail",
+            "quantity": 6
         },
         {
             "slot": 5,
@@ -189,8 +189,11 @@
             "quantity": 0
         }
     ],
-    "target_coords": null,
-    "on_target": false,
-    "min_hp_needed": 960,
+    "target_coords": [
+        0,
+        12
+    ],
+    "on_target": true,
+    "min_hp_needed": 819,
     "characters": null
 }

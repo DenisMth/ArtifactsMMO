@@ -71,7 +71,7 @@ class Character:
             if effect["code"] == "burn":
                 burn_dot = (effect["value"] * char_dmg) //100
 
-        while rounds < 100 and char_health > 1:
+        while rounds < 100 and char_health > 20:
             rounds += 1
             monster_health -= round(char_dmg * (1 + (0.5 * (self.critical_strike/100)) )) + burn_dot
             char_health -= round(monster_dmg * (1 + (0.5 * (monster["critical_strike"]/100))))
