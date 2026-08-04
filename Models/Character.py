@@ -1,9 +1,6 @@
 import asyncio
 import json
 from pathlib import Path
-from tkinter.constants import ROUND
-
-from api import API
 
 
 class Character:

@@ -1,5 +1,6 @@
 import asyncio
 from Models.Character import Character
+from Schemas.Command import Command
 
 class CharactersController:
     def __init__(self, api) -> None:
@@ -12,29 +13,45 @@ class CharactersController:
         if not parts:
             return
 
-        name = parts[0]
+        names = (
+            list(self.characters.keys())
+            if parts[0] in ["all", "a", "avengers"]
+            else parts[0].split(",")
+        )
         action = parts[1]
-        target = parts[2]
+        target = parts[2] if len(parts) > 2 else None
         option = parts[3] if len(parts) > 3 else None
 
-        if action in ["bf", "bossfight"]:
+        command = Command(
+            characters=names,
+            action=action,
+            target=target,
+            option=option
+        )
 
-            characters = name.split(",")
-            character = self.characters.get(characters[0])
-            await character.set_action(action, target, characters)
+        await self.execute(command)
+
+
+    async def execute(self, command: Command):
+
+
+        if command.action in ["bf", "bossfight"]:
+
+            character = self.characters.get(command.characters[0])
+            await character.set_action(command.action, command.target, command.characters)
 
         else:
 
-            if name != "all":
 
-                for char in name.split(","):
 
-                    character = self.characters.get(char)
-                    await character.set_action(action, target, None, option)
+            for name in command.characters:
 
-            else:
-                for character in self.characters.values():
-                    await character.set_action(action, target, None, option)
+                character = self.characters.get(name)
+                await character.set_action(
+                    command.action,
+                    command.target,
+                    None,
+                    command.option)
 
     async def load(self):
         response = await self.api.get_characters()
@@ -47,6 +64,7 @@ class CharactersController:
 
 
     async def console(self):
+
         while True:
             cmd = await asyncio.to_thread(input, "> ")
             await self.handle_command(cmd)
