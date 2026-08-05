@@ -5,7 +5,7 @@
     "level": 36,
     "xp": 1613,
     "max_xp": 29300,
-    "gold": 139,
+    "gold": 272,
     "speed": 100,
     "mining_level": 1,
     "mining_xp": 14,
@@ -31,7 +31,7 @@
     "alchemy_level": 43,
     "alchemy_xp": 32456,
     "alchemy_max_xp": 42800,
-    "hp": 409,
+    "hp": 1075,
     "max_hp": 1075,
     "haste": 12,
     "critical_strike": 10,
@@ -62,8 +62,8 @@
     "y": 6,
     "layer": "overworld",
     "map_id": 601,
-    "cooldown": 12,
-    "cooldown_expiration": "2026-08-05T10:26:54.905Z",
+    "cooldown": 93,
+    "cooldown_expiration": "2026-08-05T10:39:14.462Z",
     "weapon_slot": "elderwood_staff",
     "rune_slot": "healing_aura_rune",
     "shield_slot": "slime_shield",
@@ -91,12 +91,12 @@
         {
             "slot": 1,
             "code": "skeleton_skull",
-            "quantity": 6
+            "quantity": 8
         },
         {
             "slot": 2,
             "code": "skeleton_bone",
-            "quantity": 3
+            "quantity": 9
         },
         {
             "slot": 3,

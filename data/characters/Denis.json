@@ -5,7 +5,7 @@
     "level": 40,
     "xp": 33894,
     "max_xp": 36500,
-    "gold": 158,
+    "gold": 343,
     "speed": 100,
     "mining_level": 5,
     "mining_xp": 607,
@@ -31,7 +31,7 @@
     "alchemy_level": 1,
     "alchemy_xp": 0,
     "alchemy_max_xp": 150,
-    "hp": 969,
+    "hp": 325,
     "max_hp": 1125,
     "haste": 12,
     "critical_strike": 44,
@@ -62,8 +62,8 @@
     "y": 6,
     "layer": "overworld",
     "map_id": 601,
-    "cooldown": 9,
-    "cooldown_expiration": "2026-08-05T10:26:54.608Z",
+    "cooldown": 11,
+    "cooldown_expiration": "2026-08-05T10:39:10.382Z",
     "weapon_slot": "death_knight_sword",
     "rune_slot": "burn_rune",
     "shield_slot": "slime_shield",
@@ -91,17 +91,17 @@
         {
             "slot": 1,
             "code": "skeleton_skull",
-            "quantity": 3
+            "quantity": 7
         },
         {
             "slot": 2,
             "code": "lich_tomb_key",
-            "quantity": 1
+            "quantity": 2
         },
         {
             "slot": 3,
             "code": "skeleton_bone",
-            "quantity": 4
+            "quantity": 12
         },
         {
             "slot": 4,
