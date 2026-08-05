@@ -8,7 +8,7 @@
     "gold": 0,
     "speed": 100,
     "mining_level": 49,
-    "mining_xp": 18214,
+    "mining_xp": 18637,
     "mining_max_xp": 54200,
     "woodcutting_level": 1,
     "woodcutting_xp": 0,
@@ -67,7 +67,7 @@
     "layer": "underground",
     "map_id": 521,
     "cooldown": 34,
-    "cooldown_expiration": "2026-08-05T10:38:43.158Z",
+    "cooldown_expiration": "2026-08-05T10:43:53.607Z",
     "weapon_slot": "steel_pickaxe",
     "rune_slot": "burn_rune",
     "shield_slot": "slime_shield",
@@ -95,7 +95,7 @@
         {
             "slot": 1,
             "code": "mithril_ore",
-            "quantity": 40
+            "quantity": 49
         },
         {
             "slot": 2,

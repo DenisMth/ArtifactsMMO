@@ -14,7 +14,7 @@
     "woodcutting_xp": 2,
     "woodcutting_max_xp": 2900,
     "fishing_level": 33,
-    "fishing_xp": 19196,
+    "fishing_xp": 19476,
     "fishing_max_xp": 24200,
     "weaponcrafting_level": 1,
     "weaponcrafting_xp": 0,
@@ -67,7 +67,7 @@
     "layer": "overworld",
     "map_id": 901,
     "cooldown": 31,
-    "cooldown_expiration": "2026-08-05T10:39:06.389Z",
+    "cooldown_expiration": "2026-08-05T10:44:23.298Z",
     "weapon_slot": "steel_fishing_rod",
     "rune_slot": "healing_aura_rune",
     "shield_slot": "slime_shield",
@@ -95,7 +95,7 @@
         {
             "slot": 1,
             "code": "bass",
-            "quantity": 44
+            "quantity": 54
         },
         {
             "slot": 2,
