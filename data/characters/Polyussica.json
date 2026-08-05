@@ -5,7 +5,7 @@
     "level": 36,
     "xp": 1613,
     "max_xp": 29300,
-    "gold": 602,
+    "gold": 643,
     "speed": 100,
     "mining_level": 1,
     "mining_xp": 14,
@@ -62,8 +62,8 @@
     "y": 8,
     "layer": "overworld",
     "map_id": 709,
-    "cooldown": 93,
-    "cooldown_expiration": "2026-08-05T09:16:56.012Z",
+    "cooldown": 72,
+    "cooldown_expiration": "2026-08-05T09:21:04.314Z",
     "weapon_slot": "elderwood_staff",
     "rune_slot": "healing_aura_rune",
     "shield_slot": "slime_shield",
@@ -91,7 +91,7 @@
         {
             "slot": 1,
             "code": "lich_tomb_key",
-            "quantity": 1
+            "quantity": 2
         },
         {
             "slot": 2,
@@ -121,7 +121,7 @@
         {
             "slot": 7,
             "code": "full_moon_vampire_cape",
-            "quantity": 4
+            "quantity": 5
         },
         {
             "slot": 8,
@@ -188,12 +188,5 @@
             "code": "",
             "quantity": 0
         }
-    ],
-    "target_coords": [
-        10,
-        8
-    ],
-    "on_target": true,
-    "min_hp_needed": 325,
-    "characters": null
+    ]
 }
