@@ -2,10 +2,10 @@
     "name": "Polyussica",
     "account": "thesparatge",
     "skin": "women1",
-    "level": 35,
-    "xp": 25525,
-    "max_xp": 27500,
-    "gold": 83,
+    "level": 36,
+    "xp": 1613,
+    "max_xp": 29300,
+    "gold": 602,
     "speed": 100,
     "mining_level": 1,
     "mining_xp": 14,
@@ -31,8 +31,8 @@
     "alchemy_level": 43,
     "alchemy_xp": 32456,
     "alchemy_max_xp": 42800,
-    "hp": 269,
-    "max_hp": 1070,
+    "hp": 1075,
+    "max_hp": 1075,
     "haste": 12,
     "critical_strike": 10,
     "wisdom": 120,
@@ -58,12 +58,12 @@
             "value": 10
         }
     ],
-    "x": 0,
-    "y": 1,
+    "x": 10,
+    "y": 8,
     "layer": "overworld",
-    "map_id": 322,
-    "cooldown": 5,
-    "cooldown_expiration": "2026-08-04T14:36:46.491Z",
+    "map_id": 709,
+    "cooldown": 93,
+    "cooldown_expiration": "2026-08-05T09:16:56.012Z",
     "weapon_slot": "elderwood_staff",
     "rune_slot": "healing_aura_rune",
     "shield_slot": "slime_shield",
@@ -82,51 +82,51 @@
     "utility2_slot": "",
     "utility2_slot_quantity": 0,
     "bag_slot": "backpack",
-    "task": "chicken",
+    "task": "cyclops",
     "task_type": "monsters",
-    "task_progress": 274,
-    "task_total": 309,
-    "inventory_max_items": 203,
+    "task_progress": 64,
+    "task_total": 211,
+    "inventory_max_items": 205,
     "inventory": [
         {
             "slot": 1,
-            "code": "raw_chicken",
-            "quantity": 42
+            "code": "lich_tomb_key",
+            "quantity": 1
         },
         {
             "slot": 2,
-            "code": "feather",
-            "quantity": 10
+            "code": "skeleton_bone",
+            "quantity": 8
         },
         {
             "slot": 3,
-            "code": "egg",
-            "quantity": 4
+            "code": "skeleton_skull",
+            "quantity": 3
         },
         {
             "slot": 4,
             "code": "event_ticket",
-            "quantity": 3
+            "quantity": 2
         },
         {
             "slot": 5,
-            "code": "",
-            "quantity": 0
+            "code": "demon_horn",
+            "quantity": 6
         },
         {
             "slot": 6,
-            "code": "",
-            "quantity": 0
+            "code": "piece_of_obsidian",
+            "quantity": 2
         },
         {
             "slot": 7,
-            "code": "",
-            "quantity": 0
+            "code": "full_moon_vampire_cape",
+            "quantity": 4
         },
         {
             "slot": 8,
-            "code": "",
-            "quantity": 0
+            "code": "vampire_tooth",
+            "quantity": 4
         },
         {
             "slot": 9,
@@ -190,10 +190,10 @@
         }
     ],
     "target_coords": [
-        0,
-        1
+        10,
+        8
     ],
     "on_target": true,
-    "min_hp_needed": 3,
+    "min_hp_needed": 325,
     "characters": null
 }

@@ -2,10 +2,10 @@
     "name": "Judas",
     "account": "thesparatge",
     "skin": "men3",
-    "level": 30,
-    "xp": 18784,
-    "max_xp": 19700,
-    "gold": 296,
+    "level": 32,
+    "xp": 15973,
+    "max_xp": 22700,
+    "gold": 0,
     "speed": 100,
     "mining_level": 30,
     "mining_xp": 1062,
@@ -14,7 +14,7 @@
     "woodcutting_xp": 2,
     "woodcutting_max_xp": 2900,
     "fishing_level": 33,
-    "fishing_xp": 13288,
+    "fishing_xp": 17964,
     "fishing_max_xp": 24200,
     "weaponcrafting_level": 1,
     "weaponcrafting_xp": 0,
@@ -31,17 +31,17 @@
     "alchemy_level": 1,
     "alchemy_xp": 0,
     "alchemy_max_xp": 150,
-    "hp": 369,
-    "max_hp": 1100,
+    "hp": 853,
+    "max_hp": 1110,
     "haste": 12,
-    "critical_strike": 29,
+    "critical_strike": 5,
     "wisdom": 195,
     "prospecting": 85,
     "initiative": 310,
     "threat": 10,
-    "attack_fire": 37,
-    "attack_earth": 37,
-    "attack_water": 0,
+    "attack_fire": 0,
+    "attack_earth": 0,
+    "attack_water": 5,
     "attack_air": 0,
     "dmg": 39,
     "dmg_fire": 45,
@@ -56,15 +56,19 @@
         {
             "code": "healing_aura",
             "value": 10
+        },
+        {
+            "code": "fishing",
+            "value": -30
         }
     ],
-    "x": 0,
-    "y": 12,
+    "x": 1,
+    "y": 1,
     "layer": "overworld",
-    "map_id": 883,
-    "cooldown": 65,
-    "cooldown_expiration": "2026-08-04T14:35:42.336Z",
-    "weapon_slot": "death_knight_sword",
+    "map_id": 325,
+    "cooldown": 80,
+    "cooldown_expiration": "2026-08-05T09:06:09.018Z",
+    "weapon_slot": "steel_fishing_rod",
     "rune_slot": "healing_aura_rune",
     "shield_slot": "slime_shield",
     "helmet_slot": "royal_skeleton_helmet",
@@ -82,31 +86,31 @@
     "utility2_slot": "",
     "utility2_slot_quantity": 0,
     "bag_slot": "backpack",
-    "task": "imp",
+    "task": "vampire",
     "task_type": "monsters",
-    "task_progress": 51,
-    "task_total": 296,
-    "inventory_max_items": 193,
+    "task_progress": 83,
+    "task_total": 209,
+    "inventory_max_items": 197,
     "inventory": [
         {
             "slot": 1,
-            "code": "demoniac_dust",
-            "quantity": 11
+            "code": "bass",
+            "quantity": 167
         },
         {
             "slot": 2,
-            "code": "steel_ring",
-            "quantity": 2
+            "code": "death_knight_sword",
+            "quantity": 1
         },
         {
             "slot": 3,
-            "code": "piece_of_obsidian",
-            "quantity": 3
+            "code": "algae",
+            "quantity": 18
         },
         {
             "slot": 4,
-            "code": "imp_tail",
-            "quantity": 6
+            "code": "event_ticket",
+            "quantity": 2
         },
         {
             "slot": 5,
@@ -190,10 +194,10 @@
         }
     ],
     "target_coords": [
-        0,
-        12
+        1,
+        1
     ],
     "on_target": true,
-    "min_hp_needed": 819,
+    "min_hp_needed": 335,
     "characters": null
 }
