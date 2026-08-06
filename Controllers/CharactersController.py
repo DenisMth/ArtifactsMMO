@@ -2,6 +2,18 @@ import asyncio
 from Models.Character import Character
 from Schemas.Command import Command
 
+VALID_COMMANDS = [
+    "fight", "f",
+    "gather", "g",
+    "idle", "init", "i",
+    "bossfight", "bf",
+    "gatheraft", "gc",
+    "craft", "c",
+    "craftmass", "cm",
+    "craftcycle", "cc",
+    "assemble", "a"
+]
+
 class CharactersController:
     def __init__(self, api) -> None:
         self.api = api
@@ -35,21 +47,27 @@ class CharactersController:
     async def execute(self, command: Command):
 
 
-        if command.action in ["bf", "bossfight"]:
+        if command.action in VALID_COMMANDS:
 
-            character = self.characters.get(command.characters[0])
-            await character.set_action(command.action, command.target, command.characters)
+            if command.action in ["bf", "bossfight"]:
 
-        else:
+                character = self.characters.get(command.characters[0])
+                await character.set_action(command.action, command.target, command.characters)
 
-            for name in command.characters:
+            else:
 
-                character = self.characters.get(name)
-                await character.set_action(
-                    command.action,
-                    command.target,
-                    None,
-                    command.option)
+                for name in command.characters:
+
+                    character = self.characters.get(name)
+
+                    if character is None:
+                        print(f"Unknown character: {name}")
+
+                    await character.set_action(
+                        command.action,
+                        command.target,
+                        None,
+                        command.option)
 
     async def load(self):
         response = await self.api.get_characters()
