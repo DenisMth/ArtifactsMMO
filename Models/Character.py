@@ -224,7 +224,7 @@ class Character:
         for craft_element in craft_elements["data"]["craft"]["items"]:
             nb_items_needed += craft_element["quantity"]
 
-        craftable_items = (self.inventory_max_items - 30) // nb_items_needed
+        craftable_items = (self.inventory_max_items - round(self.inventory_max_items*0.2)) // nb_items_needed
 
         for craft_element in craft_elements["data"]["craft"]["items"]:
             resource = await self.api.find_resource(craft_element["code"])
