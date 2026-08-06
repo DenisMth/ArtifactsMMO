@@ -11,7 +11,7 @@
     "mining_xp": 13,
     "mining_max_xp": 150,
     "woodcutting_level": 47,
-    "woodcutting_xp": 5753,
+    "woodcutting_xp": 18893,
     "woodcutting_max_xp": 50600,
     "fishing_level": 1,
     "fishing_xp": 0,
@@ -63,7 +63,7 @@
     "layer": "overworld",
     "map_id": 886,
     "cooldown": 34,
-    "cooldown_expiration": "2026-08-05T12:14:18.576Z",
+    "cooldown_expiration": "2026-08-05T14:35:07.417Z",
     "weapon_slot": "steel_axe",
     "rune_slot": "",
     "shield_slot": "slime_shield",
@@ -91,12 +91,12 @@
         {
             "slot": 1,
             "code": "maple_wood",
-            "quantity": 37
+            "quantity": 112
         },
         {
             "slot": 2,
             "code": "maple_sap",
-            "quantity": 4
+            "quantity": 9
         },
         {
             "slot": 3,
@@ -188,12 +188,5 @@
             "code": "",
             "quantity": 0
         }
-    ],
-    "target_coords": [
-        1,
-        12
-    ],
-    "on_target": true,
-    "min_hp_needed": 850,
-    "characters": null
+    ]
 }

@@ -67,4 +67,8 @@ class CharactersController:
 
         while True:
             cmd = await asyncio.to_thread(input, "> ")
-            await self.handle_command(cmd)
+
+            try:
+                await self.handle_command(cmd)
+            except Exception as e:
+                print(f"Command failed: {e}")
