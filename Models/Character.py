@@ -272,7 +272,11 @@ class Character:
             }
             resources.append(withdraw_item)
 
-        response = await self.api.get_items(self, resources)
+        try:
+            response = await self.api.get_items(self, resources)
+        except ValueError as e:
+            await self.set_action("idle", None)
+            return -1
         await self._handle_response(response)
         workshop = await self.api.find_workshop(craft_elements["data"]["craft"]["skill"])
         await self.go_to_target(workshop["interactions"]["content"]["code"])

@@ -26,18 +26,23 @@ class API:
         response = await self.client.post(endpoint, json=data)
         try:
             response.raise_for_status()
-        except httpx.HTTPStatusError:
-            print(response.json())
-            raise
+        except httpx.HTTPStatusError as e:
+            error = response.json()
+            raise ValueError(
+                f"POST {endpoint} failed ({response.status_code}): {error}"
+            ) from e
+
         return response.json()
     
     async def _get(self, endpoint, data=None):
         response = await self.client.get(endpoint, params=data)
         try:
             response.raise_for_status()
-        except httpx.HTTPStatusError:
-            print(response.json())
-            raise
+        except httpx.HTTPStatusError as e:
+            error = response.json()
+            raise ValueError(
+                f"GET {endpoint} failed ({response.status_code}): {error}"
+            ) from e
         return response.json()
 
     async def get_characters(self):
