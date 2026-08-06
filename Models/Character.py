@@ -387,6 +387,9 @@ class Character:
                         await self.deposit()
                     await self.set_action("idle", "test")
 
+                else:
+                    await self.set_action("idle", "test")
+
                 items_count = 0
                 for item in self.inventory:
                     items_count += item["quantity"]

@@ -42,8 +42,6 @@ class CharactersController:
 
         else:
 
-
-
             for name in command.characters:
 
                 character = self.characters.get(name)
