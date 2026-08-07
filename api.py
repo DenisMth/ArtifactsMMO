@@ -13,7 +13,7 @@ def create_app(controller):
     app = FastAPI()
 
     origins = [
-        "http://localhost:56478",
+        "http://localhost:62739",
     ]
 
     app.add_middleware(
