@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta, timezone
-from jose import jwt
+from jose import jwt, JWTError
+from fastapi import Header, HTTPException
 
 from config import ADMIN_PASSWORD, API_KEY
 
@@ -43,3 +44,26 @@ def create_jwt_token(user: dict):
         SECRET_KEY,
         algorithm=ALGORITHM
     )
+
+async def authenticate(
+    authorization: str = Header(...)
+):
+    try:
+        scheme, token = authorization.split(" ")
+
+        if scheme.lower() != "bearer":
+            raise Exception()
+
+        payload = jwt.decode(
+            token,
+            SECRET_KEY,
+            algorithms=[ALGORITHM]
+        )
+
+        return payload
+
+    except (JWTError, ValueError):
+        raise HTTPException(
+            status_code=401,
+            detail="Invalid authentication"
+        )

@@ -5,7 +5,7 @@ from pathlib import Path
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-from auth import check_user, create_jwt_token
+from auth import authenticate, check_user, create_jwt_token
 
 BASE_DIR = Path(__file__).resolve().parent
 
