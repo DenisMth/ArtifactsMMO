@@ -1,8 +1,9 @@
-from fastapi import FastAPI, Depends
+from fastapi import FastAPI, Depends, HTTPException
 from Schemas.Command import Command
 from fastapi.responses import FileResponse
 from pathlib import Path
 from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
 
 from auth import authenticate
 
@@ -22,6 +23,27 @@ def create_app(controller):
         allow_methods=["*"],
         allow_headers=["*"],
     )
+
+    class LoginRequest(BaseModel):
+        username: str
+        password: str
+
+    @app.post("/login")
+    async def login(data: LoginRequest):
+        user = check_user(data.username, data.password)
+
+        if not user:
+            raise HTTPException(
+                status_code=401,
+                detail="Invalid credentials"
+            )
+
+        token = create_jwt_token(user)
+
+        return {
+            "access_token": token,
+            "token_type": "bearer"
+        }
 
     @app.get("/favicon.ico", include_in_schema=False)
     async def favicon():
