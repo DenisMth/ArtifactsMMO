@@ -4,7 +4,7 @@ from fastapi.responses import FileResponse
 from pathlib import Path
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from datetime import datetime
+from datetime import datetime, timezone
 
 from auth import authenticate, check_user, create_access_token, create_refresh_token, refresh_tokens, users
 
