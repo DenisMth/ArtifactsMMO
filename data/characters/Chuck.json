@@ -2,17 +2,17 @@
     "name": "Chuck",
     "account": "thesparatge",
     "skin": "men3",
-    "level": 30,
-    "xp": 4948,
-    "max_xp": 19700,
-    "gold": 0,
+    "level": 36,
+    "xp": 21051,
+    "max_xp": 29300,
+    "gold": 3041,
     "speed": 100,
     "mining_level": 1,
     "mining_xp": 13,
     "mining_max_xp": 150,
-    "woodcutting_level": 47,
-    "woodcutting_xp": 18893,
-    "woodcutting_max_xp": 50600,
+    "woodcutting_level": 50,
+    "woodcutting_xp": 0,
+    "woodcutting_max_xp": 54200,
     "fishing_level": 1,
     "fishing_xp": 0,
     "fishing_max_xp": 150,
@@ -31,52 +31,52 @@
     "alchemy_level": 1,
     "alchemy_xp": 0,
     "alchemy_max_xp": 150,
-    "hp": 850,
-    "max_hp": 850,
-    "haste": 10,
-    "critical_strike": 5,
-    "wisdom": 375,
-    "prospecting": 155,
-    "initiative": 260,
+    "hp": 316,
+    "max_hp": 1075,
+    "haste": 12,
+    "critical_strike": 34,
+    "wisdom": 70,
+    "prospecting": 235,
+    "initiative": 360,
     "threat": 10,
-    "attack_fire": 0,
-    "attack_earth": 5,
+    "attack_fire": 37,
+    "attack_earth": 37,
     "attack_water": 0,
     "attack_air": 0,
-    "dmg": 51,
-    "dmg_fire": 0,
-    "dmg_earth": 0,
-    "dmg_water": 0,
-    "dmg_air": 0,
-    "res_fire": 7,
-    "res_earth": 7,
-    "res_water": 7,
-    "res_air": 7,
+    "dmg": 64,
+    "dmg_fire": 45,
+    "dmg_earth": 10,
+    "dmg_water": 10,
+    "dmg_air": 45,
+    "res_fire": 16,
+    "res_earth": 18,
+    "res_water": 10,
+    "res_air": 24,
     "effects": [
         {
-            "code": "woodcutting",
-            "value": -30
+            "code": "burn",
+            "value": 20
         }
     ],
-    "x": 1,
-    "y": 12,
+    "x": 8,
+    "y": 6,
     "layer": "overworld",
-    "map_id": 886,
-    "cooldown": 34,
-    "cooldown_expiration": "2026-08-05T14:35:07.417Z",
-    "weapon_slot": "steel_axe",
-    "rune_slot": "",
-    "shield_slot": "slime_shield",
-    "helmet_slot": "wolf_ears",
-    "body_armor_slot": "adventurer_vest",
+    "map_id": 601,
+    "cooldown": 11,
+    "cooldown_expiration": "2026-08-14T17:24:37.869Z",
+    "weapon_slot": "death_knight_sword",
+    "rune_slot": "burn_rune",
+    "shield_slot": "gold_shield",
+    "helmet_slot": "royal_skeleton_helmet",
+    "body_armor_slot": "royal_skeleton_armor",
     "leg_armor_slot": "conjurer_skirt",
-    "boots_slot": "old_boots",
+    "boots_slot": "gold_boots",
     "ring1_slot": "royal_skeleton_ring",
     "ring2_slot": "royal_skeleton_ring",
-    "amulet_slot": "wisdom_amulet",
-    "artifact1_slot": "novice_guide",
-    "artifact2_slot": "lost_world_map",
-    "artifact3_slot": "",
+    "amulet_slot": "dreadful_amulet",
+    "artifact1_slot": "lich_race_medal",
+    "artifact2_slot": "perfect_pearl",
+    "artifact3_slot": "lich_race_trophy",
     "utility1_slot": "",
     "utility1_slot_quantity": 0,
     "utility2_slot": "",
@@ -84,54 +84,54 @@
     "bag_slot": "backpack",
     "task": "skeleton",
     "task_type": "monsters",
-    "task_progress": 285,
-    "task_total": 371,
-    "inventory_max_items": 193,
+    "task_progress": 81,
+    "task_total": 400,
+    "inventory_max_items": 205,
     "inventory": [
         {
             "slot": 1,
-            "code": "maple_wood",
-            "quantity": 112
+            "code": "skeleton_skull",
+            "quantity": 15
         },
         {
             "slot": 2,
-            "code": "maple_sap",
-            "quantity": 9
+            "code": "lich_tomb_key",
+            "quantity": 3
         },
         {
             "slot": 3,
-            "code": "",
-            "quantity": 0
+            "code": "event_ticket",
+            "quantity": 3
         },
         {
             "slot": 4,
-            "code": "",
-            "quantity": 0
+            "code": "skeleton_bone",
+            "quantity": 25
         },
         {
             "slot": 5,
-            "code": "",
-            "quantity": 0
+            "code": "tasks_coin",
+            "quantity": 8
         },
         {
             "slot": 6,
-            "code": "",
-            "quantity": 0
+            "code": "imp_tail",
+            "quantity": 69
         },
         {
             "slot": 7,
-            "code": "",
-            "quantity": 0
+            "code": "piece_of_obsidian",
+            "quantity": 16
         },
         {
             "slot": 8,
-            "code": "",
-            "quantity": 0
+            "code": "demoniac_dust",
+            "quantity": 47
         },
         {
             "slot": 9,
-            "code": "",
-            "quantity": 0
+            "code": "demon_horn",
+            "quantity": 3
         },
         {
             "slot": 10,

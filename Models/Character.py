@@ -1,6 +1,7 @@
 import asyncio
 import json
 from pathlib import Path
+from .StuffManager import get_best_possible_stuff
 
 
 class Character:
@@ -83,53 +84,6 @@ class Character:
 
         return -1
 
-    async def get_best_possible_stuff(self):
-
-        monster = (await self.api.find_monster(self.target))["data"]
-
-        resistances = {
-            "fire": monster["res_fire"],
-            "earth": monster["res_earth"],
-            "water": monster["res_water"],
-            "air": monster["res_air"],
-        }
-
-        sorted_resistances = sorted(resistances.items(), key=lambda item: item[1])
-
-        weapons = (await self.api.find_category_items("weaponcrafting", 1, self.level))["data"]
-
-        sorted_weapons = []
-
-        for best_element, _ in sorted_resistances:
-
-            wanted_weapons = [
-                weapon
-                for weapon in weapons
-                if weapon["subtype"] == ""
-                   and any(
-                    effect["code"] == f"attack_{best_element}"
-                    for effect in weapon["effects"]
-                )
-            ]
-
-            wanted_weapons.sort(
-                key=lambda weapon: (
-                    next(
-                        effect["value"]
-                        for effect in weapon["effects"]
-                        if effect["code"] == f"attack_{best_element}"
-                    ),
-                    weapon["level"],
-                ),
-                reverse=True,
-            )
-
-            sorted_weapons.extend(weapon["code"] for weapon in wanted_weapons)
-
-        print(sorted_weapons)
-
-
-
     async def go_to_target(self, target=None):
 
         if not target:
@@ -181,7 +135,7 @@ class Character:
             if self.target == "task" and self.task_type == "monsters":
                 self.target = self.task
 
-            # await self.get_best_possible_stuff()
+            # await get_best_possible_stuff(self)
 
             self.min_hp_needed = await self.fight_hp_needed()
             if self.min_hp_needed < 0:
@@ -197,7 +151,7 @@ class Character:
 
         if self.task_type == "monsters":
             if self.task_progress == self.task_total:
-                await self.move(1, 2)
+                await self.go_to_target("monsters")
                 await self.complete_task()
                 await self.accept_task()
                 await self.set_action("fight", "task")
