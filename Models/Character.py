@@ -116,6 +116,10 @@ class Character:
             else:
                 await self.move(self.target_coords[0], self.target_coords[1])
 
+    async def equip_stuff(self, stuff):
+        response = await self.api.equip_stuff(self, stuff)
+        await self._handle_response(response)
+
     async def boss_fight(self, characters):
 
         if self.hp < 500:
@@ -135,7 +139,7 @@ class Character:
             if self.target == "task" and self.task_type == "monsters":
                 self.target = self.task
 
-            # await get_best_possible_stuff(self)
+            await get_best_possible_stuff(self)
 
             self.min_hp_needed = await self.fight_hp_needed()
             if self.min_hp_needed < 0:

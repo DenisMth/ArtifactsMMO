@@ -1,5 +1,7 @@
 import httpx
 import asyncio
+import json
+from pathlib import Path
 from config import TOKEN, base_url
 
 class API:
@@ -50,6 +52,23 @@ class API:
 
     async def get_items(self, character, resources):
         return await self._post(f"my/{character.name}/action/bank/withdraw/item", resources)
+
+    async def fetch_bank_items(self):
+        data = await self._get("my/bank/items")
+        bank_items = data["data"]
+        page = data["page"]
+        while page < data["pages"]:
+            data = await self._get("my/bank/items", {"page": page+1})
+            bank_items.extend(data["data"])
+            page += 1
+
+        Path("data/bank").mkdir(exist_ok=True)
+
+        with open(f"data/bank/bank.json", "w") as f:
+            json.dump(bank_items, f, indent=4)
+
+        return bank_items
+
 
     async def find_map_tile(self, character, target):
 
@@ -109,11 +128,12 @@ class API:
     async def find_craft_elements(self, target):
         return await self._get(f"items/{target}")
 
-    async def find_category_items(self, category,  min=0, max=50):
+    async def find_category_items(self, category, type,  min=0, max=50):
         query = {
             "min_level": str(min),
             "max_level": str(max),
-            "craft_skill": category
+            "craft_skill": category,
+            "type": type
         }
         return await self._get(f"items", query)
 
@@ -138,6 +158,9 @@ class API:
 
     async def transition(self, character):
         return await self._post(f"my/{character.name}/action/transition")
+
+    async def equip_stuff(self, character, stuff):
+        return await self._post(f"my/{character.name}/action/equip", stuff)
 
     async def fight(self, character):
         return await self._post(f"my/{character.name}/action/fight")

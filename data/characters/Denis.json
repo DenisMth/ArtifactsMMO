@@ -5,7 +5,7 @@
     "level": 41,
     "xp": 13164,
     "max_xp": 38600,
-    "gold": 1640,
+    "gold": 2950,
     "speed": 100,
     "mining_level": 12,
     "mining_xp": 1475,
@@ -31,7 +31,7 @@
     "alchemy_level": 1,
     "alchemy_xp": 0,
     "alchemy_max_xp": 150,
-    "hp": 465,
+    "hp": 1200,
     "max_hp": 1200,
     "haste": 13,
     "critical_strike": 20,
@@ -62,8 +62,8 @@
     "y": -3,
     "layer": "overworld",
     "map_id": 139,
-    "cooldown": 16,
-    "cooldown_expiration": "2026-08-14T17:24:38.099Z",
+    "cooldown": 71,
+    "cooldown_expiration": "2026-08-14T20:32:57.890Z",
     "weapon_slot": "elderwood_staff",
     "rune_slot": "burn_rune",
     "shield_slot": "gold_shield",
@@ -116,12 +116,12 @@
         {
             "slot": 6,
             "code": "cyclops_eye",
-            "quantity": 1
+            "quantity": 53
         },
         {
             "slot": 7,
-            "code": "",
-            "quantity": 0
+            "code": "event_ticket",
+            "quantity": 3
         },
         {
             "slot": 8,

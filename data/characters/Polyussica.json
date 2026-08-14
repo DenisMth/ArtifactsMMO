@@ -5,7 +5,7 @@
     "level": 39,
     "xp": 13585,
     "max_xp": 34700,
-    "gold": 3494,
+    "gold": 56,
     "speed": 100,
     "mining_level": 21,
     "mining_xp": 12,
@@ -31,7 +31,7 @@
     "alchemy_level": 43,
     "alchemy_xp": 32456,
     "alchemy_max_xp": 42800,
-    "hp": 1090,
+    "hp": 320,
     "max_hp": 1090,
     "haste": 12,
     "critical_strike": 10,
@@ -59,11 +59,11 @@
         }
     ],
     "x": 0,
-    "y": 12,
+    "y": 1,
     "layer": "overworld",
-    "map_id": 883,
-    "cooldown": 68,
-    "cooldown_expiration": "2026-08-14T17:24:52.309Z",
+    "map_id": 322,
+    "cooldown": 5,
+    "cooldown_expiration": "2026-08-14T20:32:13.470Z",
     "weapon_slot": "elderwood_staff",
     "rune_slot": "burn_rune",
     "shield_slot": "gold_shield",
@@ -82,51 +82,51 @@
     "utility2_slot": "",
     "utility2_slot_quantity": 0,
     "bag_slot": "backpack",
-    "task": "imp",
+    "task": "orc",
     "task_type": "monsters",
-    "task_progress": 314,
-    "task_total": 316,
+    "task_progress": 0,
+    "task_total": 388,
     "inventory_max_items": 211,
     "inventory": [
         {
             "slot": 1,
-            "code": "cyclops_eye",
-            "quantity": 29
+            "code": "raw_chicken",
+            "quantity": 22
         },
         {
             "slot": 2,
-            "code": "iron_pickaxe",
-            "quantity": 1
+            "code": "feather",
+            "quantity": 6
         },
         {
             "slot": 3,
-            "code": "event_ticket",
-            "quantity": 5
-        },
-        {
-            "slot": 4,
-            "code": "tasks_coin",
+            "code": "egg",
             "quantity": 4
         },
         {
+            "slot": 4,
+            "code": "",
+            "quantity": 0
+        },
+        {
             "slot": 5,
-            "code": "imp_tail",
-            "quantity": 62
+            "code": "",
+            "quantity": 0
         },
         {
             "slot": 6,
-            "code": "demoniac_dust",
-            "quantity": 54
+            "code": "",
+            "quantity": 0
         },
         {
             "slot": 7,
-            "code": "piece_of_obsidian",
-            "quantity": 18
+            "code": "",
+            "quantity": 0
         },
         {
             "slot": 8,
-            "code": "demon_horn",
-            "quantity": 9
+            "code": "",
+            "quantity": 0
         },
         {
             "slot": 9,

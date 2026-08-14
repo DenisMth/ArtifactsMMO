@@ -5,7 +5,7 @@
     "level": 36,
     "xp": 21051,
     "max_xp": 29300,
-    "gold": 3041,
+    "gold": 1714,
     "speed": 100,
     "mining_level": 1,
     "mining_xp": 13,
@@ -31,7 +31,7 @@
     "alchemy_level": 1,
     "alchemy_xp": 0,
     "alchemy_max_xp": 150,
-    "hp": 316,
+    "hp": 1,
     "max_hp": 1075,
     "haste": 12,
     "critical_strike": 34,
@@ -58,12 +58,12 @@
             "value": 20
         }
     ],
-    "x": 8,
-    "y": 6,
+    "x": 7,
+    "y": -3,
     "layer": "overworld",
-    "map_id": 601,
-    "cooldown": 11,
-    "cooldown_expiration": "2026-08-14T17:24:37.869Z",
+    "map_id": 139,
+    "cooldown": 50,
+    "cooldown_expiration": "2026-08-14T20:32:28.443Z",
     "weapon_slot": "death_knight_sword",
     "rune_slot": "burn_rune",
     "shield_slot": "gold_shield",
@@ -82,56 +82,56 @@
     "utility2_slot": "",
     "utility2_slot_quantity": 0,
     "bag_slot": "backpack",
-    "task": "skeleton",
+    "task": "cyclops",
     "task_type": "monsters",
-    "task_progress": 81,
-    "task_total": 400,
+    "task_progress": 77,
+    "task_total": 128,
     "inventory_max_items": 205,
     "inventory": [
         {
             "slot": 1,
-            "code": "skeleton_skull",
-            "quantity": 15
+            "code": "lich_tomb_key",
+            "quantity": 7
         },
         {
             "slot": 2,
-            "code": "lich_tomb_key",
-            "quantity": 3
+            "code": "skeleton_skull",
+            "quantity": 22
         },
         {
             "slot": 3,
-            "code": "event_ticket",
-            "quantity": 3
+            "code": "skeleton_bone",
+            "quantity": 27
         },
         {
             "slot": 4,
-            "code": "skeleton_bone",
-            "quantity": 25
+            "code": "event_ticket",
+            "quantity": 4
         },
         {
             "slot": 5,
             "code": "tasks_coin",
-            "quantity": 8
+            "quantity": 4
         },
         {
             "slot": 6,
-            "code": "imp_tail",
-            "quantity": 69
-        },
-        {
-            "slot": 7,
-            "code": "piece_of_obsidian",
+            "code": "cyclops_eye",
             "quantity": 16
         },
         {
+            "slot": 7,
+            "code": "",
+            "quantity": 0
+        },
+        {
             "slot": 8,
-            "code": "demoniac_dust",
-            "quantity": 47
+            "code": "",
+            "quantity": 0
         },
         {
             "slot": 9,
-            "code": "demon_horn",
-            "quantity": 3
+            "code": "",
+            "quantity": 0
         },
         {
             "slot": 10,
