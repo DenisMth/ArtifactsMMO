@@ -13,13 +13,13 @@ BASE_DIR = Path(__file__).resolve().parent
 def create_app(controller):
     app = FastAPI()
 
-    origins = [
-        "http://localhost:51487",
-    ]
+    # origins = [
+    #     "http://localhost:",
+    # ]
 
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=origins,
+        #allow_origins=origins,
         allow_credentials=False,
         allow_methods=["*"],
         allow_headers=["*"],
