@@ -162,67 +162,44 @@ async def get_best_possible_weapon(character, slot, bank, sorted_resistances):
            and item["level"] <= character.level
     ]
 
-    sorted_weapons = []
+    wanted_weapons = []
+    equipped_weapon = None
 
-    seen_weapons = set()
+    for weapon in weapons:
 
-    for element, resistance in sorted_resistances:
+        score = 0
 
-        wanted_weapons = [
-            weapon
-            for weapon in weapons
-            if weapon["subtype"] == ""
-            and weapon["code"] not in seen_weapons
-            and any(
-                effect["code"] == f"attack_{element}"
-                for effect in weapon["effects"]
-            )
-        ]
+        for effect in weapon["effects"]:
+            if effect["code"].startswith("attack_"):
 
-        wanted_weapons.sort(
-            key=lambda weapon: (
-                weapon["level"],
-                next(
-                    effect["value"]
-                    for effect in weapon["effects"]
-                    if effect["code"] == f"attack_{element}"
-                ),
-            ),
-            reverse=True,
-        )
+                for element, value in sorted_resistances:
+                    if effect["code"] == f"attack_{element}":
+                        score += effect["value"] * (100 - value) / 100
 
-        if wanted_weapons:
+            elif effect["code"] == "critical_strike":
+                score += effect["value"]
 
-            for weapon in wanted_weapons:
-                seen_weapons.add(weapon["code"])
+        weapon_data = {
+            "code": weapon["code"],
+            "score": score,
+        }
 
-                weapon_elements = sorted(
-                    [
-                        (
-                            effect["code"].replace("attack_", ""),
-                            effect["value"],
-                        )
-                        for effect in weapon["effects"]
-                        if effect["code"].startswith("attack_")
-                           and effect["value"] > 0
-                    ],
-                    key=lambda x: x[1],
-                    reverse=True,
-                )
+        wanted_weapons.append(weapon_data)
 
-                sorted_weapons.append({
-                    "code": weapon["code"],
-                    "elements": weapon_elements,
-                })
+        if weapon["code"] == getattr(character, f"{slot}_slot"):
+            equipped_weapon = weapon_data
+
+    wanted_weapons.sort(
+        key=lambda weapon: weapon["score"],
+        reverse=True,
+    )
 
     # print(sorted_weapons)
     # print(len(sorted_weapons))
 
-    for weapon in sorted_weapons:
+    for weapon in wanted_weapons:
         if any(item["code"] == weapon["code"] for item in bank) or weapon["code"] == getattr(character, f"{slot}_slot"):
             print(f"Weapon code: {weapon}")
-            if weapon["code"] == getattr(character, f"{slot}_slot"):
-                return None
             return weapon
 
     return None
