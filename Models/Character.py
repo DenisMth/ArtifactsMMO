@@ -26,12 +26,16 @@ class Character:
             )
 
             self.update(update_char)
+
+
         self.action = action
         self.target = target
         self.option = option
         self.characters = characters
         self.target_coords = None
         self.on_target = False
+
+
 
     async def _handle_response(self, response):
         await asyncio.sleep(response["data"]["cooldown"]["total_seconds"])
@@ -179,6 +183,8 @@ class Character:
 
         nb_items_needed = 0
 
+        await get_best_possible_stuff(self,craft_elements["data"]["craft"]["skill"])
+
         for craft_element in craft_elements["data"]["craft"]["items"]:
             nb_items_needed += craft_element["quantity"]
 
@@ -204,6 +210,9 @@ class Character:
 
     async def craft_from_bank(self, quantity=-1):
         # main_target = self.target
+
+        await get_best_possible_stuff(self, "craft")
+
         craft_elements = await self.api.find_craft_elements(self.target)
 
         nb_items_needed = 0

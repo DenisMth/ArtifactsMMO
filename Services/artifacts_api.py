@@ -8,6 +8,7 @@ class API:
 
     def __init__(self) -> None:
         self.base_url = base_url
+        self.items = []
 
         self.client = httpx.AsyncClient(
             headers={
@@ -49,6 +50,41 @@ class API:
 
     async def get_characters(self):
         return await self._get("my/characters")
+
+    async def get_all_items(self):
+        data = await self._get("items")
+
+        items = self.load_items()
+
+        if data["total"] == len(items):
+            self.items = items
+            return items
+
+        items = data["data"]
+        page = data["page"]
+
+        while page < data["pages"]:
+            data = await self._get("items", {"page": page+1})
+            items.extend(data["data"])
+            page += 1
+
+        Path("data/items").mkdir(exist_ok=True)
+
+        with open(f"data/items/items.json", "w") as f:
+            json.dump(items, f, indent=4)
+
+        self.items = items
+        return items
+
+    @staticmethod
+    def load_items():
+        path = Path("data/items/items.json")
+
+        if not path.exists():
+            return []
+
+        with path.open("r", encoding="utf-8") as f:
+            return json.load(f)
 
     async def get_items(self, character, resources):
         return await self._post(f"my/{character.name}/action/bank/withdraw/item", resources)

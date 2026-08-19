@@ -70,13 +70,17 @@ class CharactersController:
                         command.option)
 
     async def load(self):
-        response = await self.api.get_characters()
+        characters = await self.api.get_characters()
 
-        for data in response["data"]:
+        for data in characters["data"]:
             character = Character(self.api, data)
             self.characters[character.name] = character
 
         print("Loaded characters:", list(self.characters.keys()))
+
+        items = await self.api.get_all_items()
+
+        print(f"Loaded {len(items)} items")
 
 
     async def console(self):
