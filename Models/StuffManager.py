@@ -146,6 +146,8 @@ async def get_best_possible_tool(character, slot, bank, skill):
     for tool in tools:
         if any(item["code"] == tool["code"] for item in bank) or tool["code"] == getattr(character, f"{slot}_slot"):
             print(tool)
+            if tool["code"] == getattr(character, f"{slot}_slot"):
+                return None
             return tool
 
     return None
@@ -219,6 +221,8 @@ async def get_best_possible_weapon(character, slot, bank, sorted_resistances):
     for weapon in sorted_weapons:
         if any(item["code"] == weapon["code"] for item in bank) or weapon["code"] == getattr(character, f"{slot}_slot"):
             print(weapon)
+            if weapon["code"] == getattr(character, f"{slot}_slot"):
+                return None
             return weapon
 
     return None
