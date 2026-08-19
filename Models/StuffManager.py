@@ -172,6 +172,7 @@ async def get_best_possible_weapon(character, slot, bank, sorted_resistances):
     for weapon in weapons:
 
         score = 0
+        elements = []
 
         for effect in weapon["effects"]:
             if effect["code"].startswith("attack_"):
@@ -179,6 +180,7 @@ async def get_best_possible_weapon(character, slot, bank, sorted_resistances):
                 for element, value in sorted_resistances:
                     if effect["code"] == f"attack_{element}":
                         score += effect["value"] * (100 - value) / 100
+                        elements.append((element, effect["value"]))
 
             elif effect["code"] == "critical_strike":
                 score += effect["value"]
@@ -186,6 +188,7 @@ async def get_best_possible_weapon(character, slot, bank, sorted_resistances):
         weapon_data = {
             "code": weapon["code"],
             "score": score,
+            "elements": elements
         }
 
         wanted_weapons.append(weapon_data)
