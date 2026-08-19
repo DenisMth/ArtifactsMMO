@@ -220,7 +220,7 @@ async def get_best_possible_weapon(character, slot, bank, sorted_resistances):
 
     for weapon in sorted_weapons:
         if any(item["code"] == weapon["code"] for item in bank) or weapon["code"] == getattr(character, f"{slot}_slot"):
-            print(weapon)
+            print(f"Weapon code: {weapon}")
             if weapon["code"] == getattr(character, f"{slot}_slot"):
                 return None
             return weapon
@@ -569,9 +569,10 @@ async def get_best_possible_artifacts(character, bank, max_stat):
     for artifact in wanted_artifacts:
         if any(item["code"] == artifact["code"] for item in bank) or artifact["code"] in equipped_artifacts:
             found_candidates.append(artifact["code"])
-            print(artifact)
         if len(found_candidates) >= 3:
             break
+
+    print(f"Candidates: {found_candidates}")
 
     for i, artifact in enumerate(equipped_artifacts):
         if artifact in found_candidates:
