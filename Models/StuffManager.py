@@ -576,13 +576,14 @@ async def get_best_possible_artifacts(character, bank, max_stat):
 
     for i, artifact in enumerate(equipped_artifacts):
         if artifact in found_candidates:
+            found_candidates.remove(artifact)
             results[i] = None
 
     for i, result in enumerate(results):
         if result == "empty":
             for artifact in found_candidates:
-                if artifact not in results:
-                    results[i] = artifact
+                found_candidates.remove(artifact)
+                results[i] = artifact
 
     print(results)
     return results
