@@ -1,6 +1,3 @@
-from pip._internal.resolution.resolvelib import found_candidates
-
-
 async def get_best_possible_stuff(character, skill=None):
 
     bank = await character.api.fetch_bank_items()
@@ -87,6 +84,9 @@ async def get_best_possible_stuff(character, skill=None):
 
     if len(bank_withdraw) > 0:
         await character.go_to_target("bank")
+
+        response = await character.api.get_items(character, bank_withdraw)
+        await character._handle_response(response)
 
         best_possible_stuff = [
             (best_weapon, "weapon"),
