@@ -84,6 +84,8 @@ async def get_best_possible_stuff(character, skill=None):
 
     if len(bank_withdraw) > 0:
         await character.go_to_target("bank")
+        if character.inventory[0]["code"] != "":
+            await character.deposit()
 
         response = await character.api.get_items(character, bank_withdraw)
         await character._handle_response(response)
@@ -117,7 +119,9 @@ async def get_best_possible_stuff(character, skill=None):
 
         print(stuff)
 
-        response = await character.equip_stuff(stuff)
+        await character.equip_stuff(stuff)
+        if character.inventory[0]["code"] != "":
+            await character.deposit()
 
 async def get_best_possible_tool(character, slot, bank, skill):
 
