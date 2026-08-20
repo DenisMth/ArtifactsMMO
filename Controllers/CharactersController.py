@@ -25,11 +25,7 @@ class CharactersController:
         if not parts:
             return
 
-        names = (
-            list(self.characters.keys())
-            if parts[0] in ["all", "a", "avengers"]
-            else parts[0].split(",")
-        )
+        names = parts[0]
         action = parts[1]
         target = parts[2] if len(parts) > 2 else None
         option = parts[3] if len(parts) > 3 else None
@@ -55,6 +51,9 @@ class CharactersController:
                 await character.set_action(command.action, command.target, command.characters)
 
             else:
+
+                if command.characters[0] in ['all', 'a', 'avengers']:
+                    command.characters = list(self.characters.keys())
 
                 for name in command.characters:
 
