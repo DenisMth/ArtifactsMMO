@@ -125,27 +125,34 @@ async def get_best_possible_stuff(character, skill=None):
 
 async def get_best_possible_tool(character, slot, bank, skill):
 
-    # skill = mining
+    if skill != "craft":
 
-    tools = [
-        item
-        for item in character.api.items
-        if item["type"] == "weapon"
-           and item.get("subtype", "") == "tool"
-           and item["level"] <= getattr(character, f"{skill}_level")
-           and any(
-            effect["code"] == skill
-            for effect in item["effects"]
-        )
-    ]
+        tools = [
+            item
+            for item in character.api.items
+            if item["type"] == "weapon"
+               and item.get("subtype", "") == "tool"
+               and item["level"] <= getattr(character, f"{skill}_level")
+               and any(
+                effect["code"] == skill
+                for effect in item["effects"]
+            )
+        ]
 
-    tools.sort(
-        key=lambda tool: next(
-            effect["value"]
-            for effect in tool["effects"]
-            if effect["code"] == skill
+        tools.sort(
+            key=lambda tool: next(
+                effect["value"]
+                for effect in tool["effects"]
+                if effect["code"] == skill
+            )
         )
-    )
+    else:
+        tools = [
+            item
+            for item in character.api.items
+            if item["type"] == "weapon"
+               and item.get("code") == character.weapon_slot
+        ]
 
     for tool in tools:
         if any(item["code"] == tool["code"] for item in bank) or tool["code"] == getattr(character, f"{slot}_slot"):
