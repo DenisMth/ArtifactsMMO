@@ -5,10 +5,9 @@ from .StuffManager import get_best_possible_stuff
 
 
 class Character:
-    def __init__(self, api, data, bank_lock) -> None:
+    def __init__(self, api, data) -> None:
         self.api = api
         self.update(data)
-        self.bank_lock = bank_lock
 
         self.action = "init"
         self.target = None

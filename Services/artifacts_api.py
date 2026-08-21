@@ -9,6 +9,7 @@ class API:
     def __init__(self) -> None:
         self.base_url = base_url
         self.items = []
+        self.bank_lock = asyncio.Lock()
 
         self.client = httpx.AsyncClient(
             headers={

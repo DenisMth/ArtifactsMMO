@@ -18,7 +18,6 @@ class CharactersController:
     def __init__(self, api) -> None:
         self.api = api
         self.characters = {}
-        self.bank_lock = asyncio.Lock()
 
     async def handle_command(self, cmd):
         parts = cmd.strip().split()
@@ -73,7 +72,7 @@ class CharactersController:
         characters = await self.api.get_characters()
 
         for data in characters["data"]:
-            character = Character(self.api, data, bank_lock=self.bank_lock)
+            character = Character(self.api, data)
             self.characters[character.name] = character
 
         print("Loaded characters:", list(self.characters.keys()))

@@ -1,5 +1,5 @@
 async def get_best_possible_stuff(character, skill=None):
-    async with character.bank_lock:
+    async with character.api.bank_lock:
         bank = await character.api.fetch_bank_items()
 
         if not skill:
