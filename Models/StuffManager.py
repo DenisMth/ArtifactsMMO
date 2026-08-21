@@ -1,129 +1,129 @@
 async def get_best_possible_stuff(character, skill=None):
+    async with character.bank_lock:
+        bank = await character.api.fetch_bank_items()
 
-    bank = await character.api.fetch_bank_items()
+        if not skill:
+            monster = (await character.api.find_monster(character.target))["data"]
 
-    if not skill:
-        monster = (await character.api.find_monster(character.target))["data"]
+            resistances = {
+                "fire": monster["res_fire"],
+                "earth": monster["res_earth"],
+                "water": monster["res_water"],
+                "air": monster["res_air"],
+            }
 
-        resistances = {
-            "fire": monster["res_fire"],
-            "earth": monster["res_earth"],
-            "water": monster["res_water"],
-            "air": monster["res_air"],
-        }
+            sorted_resistances = sorted(resistances.items(), key=lambda item: item[1])
 
-        sorted_resistances = sorted(resistances.items(), key=lambda item: item[1])
+            attacks = {
+                "fire": monster["attack_fire"],
+                "earth": monster["attack_earth"],
+                "water": monster["attack_water"],
+                "air": monster["attack_air"],
+            }
 
-        attacks = {
-            "fire": monster["attack_fire"],
-            "earth": monster["attack_earth"],
-            "water": monster["attack_water"],
-            "air": monster["attack_air"],
-        }
+            sorted_attacks = sorted(attacks.items(), key=lambda item: item[1])
 
-        sorted_attacks = sorted(attacks.items(), key=lambda item: item[1])
+            best_weapon = await get_best_possible_weapon(character, "weapon", bank, sorted_resistances)
+            best_helmet = await get_best_possible_armor_piece(character,"helmet", bank, best_weapon)
+            best_body_armor = await get_best_possible_armor_piece(character, "body_armor", bank, best_weapon)
+            best_leg_armor = await get_best_possible_armor_piece(character, "leg_armor", bank, best_weapon)
+            best_boots = await get_best_possible_armor_piece(character, "boots", bank, best_weapon)
+            best_shield = await get_best_possible_shield(character, "shield", bank, sorted_attacks)
 
-        best_weapon = await get_best_possible_weapon(character, "weapon", bank, sorted_resistances)
-        best_helmet = await get_best_possible_armor_piece(character,"helmet", bank, best_weapon)
-        best_body_armor = await get_best_possible_armor_piece(character, "body_armor", bank, best_weapon)
-        best_leg_armor = await get_best_possible_armor_piece(character, "leg_armor", bank, best_weapon)
-        best_boots = await get_best_possible_armor_piece(character, "boots", bank, best_weapon)
-        best_shield = await get_best_possible_shield(character, "shield", bank, sorted_attacks)
+            best_rings = await get_best_possible_rings(character, bank, best_weapon)
+            best_artifacts = await get_best_possible_artifacts(character, bank, "fight")
+            best_amulet = await get_best_possible_amulet(character, bank, best_weapon)
 
-        best_rings = await get_best_possible_rings(character, bank, best_weapon)
-        best_artifacts = await get_best_possible_artifacts(character, bank, "fight")
-        best_amulet = await get_best_possible_amulet(character, bank, best_weapon)
+            if best_weapon["code"] == character.weapon_slot:
+                best_weapon = None
 
-        if best_weapon["code"] == character.weapon_slot:
-            best_weapon = None
-
-    else:
-
-        if skill in ["mining","woodcutting","fishing","alchemy"]:
-            max_stat = "prospecting"
         else:
-            max_stat = "wisdom"
 
-        best_weapon = await get_best_possible_tool(character, "weapon", bank, skill)
-        best_helmet = await get_best_possible_skill_armor_piece(character, "helmet", bank, max_stat)
-        best_body_armor = await get_best_possible_skill_armor_piece(character, "body_armor", bank, max_stat)
-        best_leg_armor = await get_best_possible_skill_armor_piece(character, "leg_armor", bank, max_stat)
-        best_boots = await get_best_possible_skill_armor_piece(character, "boots", bank, max_stat)
-        best_shield = None
+            if skill in ["mining","woodcutting","fishing","alchemy"]:
+                max_stat = "prospecting"
+            else:
+                max_stat = "wisdom"
 
-        best_rings = await get_best_possible_skill_rings(character, bank, max_stat)
-        best_artifacts = await get_best_possible_artifacts(character, bank, max_stat)
-        best_amulet = await get_best_possible_skill_amulet(character, bank, max_stat)
+            best_weapon = await get_best_possible_tool(character, "weapon", bank, skill)
+            best_helmet = await get_best_possible_skill_armor_piece(character, "helmet", bank, max_stat)
+            best_body_armor = await get_best_possible_skill_armor_piece(character, "body_armor", bank, max_stat)
+            best_leg_armor = await get_best_possible_skill_armor_piece(character, "leg_armor", bank, max_stat)
+            best_boots = await get_best_possible_skill_armor_piece(character, "boots", bank, max_stat)
+            best_shield = None
 
-    bank_withdraw_stuff = [
-        (best_weapon, 1),
-        (best_helmet, 1),
-        (best_body_armor, 1),
-        (best_leg_armor, 1),
-        (best_boots, 1),
-        (best_shield, 1),
-        (best_rings[0], 2),
-        (best_artifacts[0], 1),
-        (best_artifacts[1], 1),
-        (best_artifacts[2], 1),
-        (best_amulet, 1)
-    ]
+            best_rings = await get_best_possible_skill_rings(character, bank, max_stat)
+            best_artifacts = await get_best_possible_artifacts(character, bank, max_stat)
+            best_amulet = await get_best_possible_skill_amulet(character, bank, max_stat)
 
-    bank_withdraw = []
-
-    for item, quantity in bank_withdraw_stuff:
-        if item is not None:
-            code = item["code"] if isinstance(item, dict) else item
-
-            bank_withdraw.append({
-                "code": code,
-                "quantity": quantity
-            })
-
-    print(bank_withdraw)
-
-    if len(bank_withdraw) > 0:
-        await character.go_to_target("bank")
-        if character.inventory[0]["code"] != "":
-            await character.deposit()
-
-        response = await character.api.get_items(character, bank_withdraw)
-        await character._handle_response(response)
-
-        await character.rest()
-
-        best_possible_stuff = [
-            (best_weapon, "weapon"),
-            (best_helmet, "helmet"),
-            (best_body_armor, "body_armor"),
-            (best_leg_armor, "leg_armor"),
-            (best_boots, "boots"),
-            (best_shield, "shield"),
-            (best_rings[0], "ring1"),
-            (best_rings[1], "ring2"),
-            (best_artifacts[0], "artifact1"),
-            (best_artifacts[1], "artifact2"),
-            (best_artifacts[2], "artifact3"),
-            (best_amulet, "amulet")
+        bank_withdraw_stuff = [
+            (best_weapon, 1),
+            (best_helmet, 1),
+            (best_body_armor, 1),
+            (best_leg_armor, 1),
+            (best_boots, 1),
+            (best_shield, 1),
+            (best_rings[0], 2),
+            (best_artifacts[0], 1),
+            (best_artifacts[1], 1),
+            (best_artifacts[2], 1),
+            (best_amulet, 1)
         ]
 
-        stuff = []
+        bank_withdraw = []
 
-        for stuff_element, slot in best_possible_stuff:
-            if stuff_element is not None:
-                code = stuff_element["code"] if isinstance(stuff_element, dict) else stuff_element
+        for item, quantity in bank_withdraw_stuff:
+            if item is not None:
+                code = item["code"] if isinstance(item, dict) else item
 
-                stuff.append({
+                bank_withdraw.append({
                     "code": code,
-                    "slot": slot,
-                    "quantity": 1
+                    "quantity": quantity
                 })
 
-        print(stuff)
+        print(bank_withdraw)
 
-        await character.equip_stuff(stuff)
-        if character.inventory[0]["code"] != "":
-            await character.deposit()
+        if len(bank_withdraw) > 0:
+            await character.go_to_target("bank")
+            if character.inventory[0]["code"] != "":
+                await character.deposit()
+
+            response = await character.api.get_items(character, bank_withdraw)
+            await character._handle_response(response)
+
+            await character.rest()
+
+            best_possible_stuff = [
+                (best_weapon, "weapon"),
+                (best_helmet, "helmet"),
+                (best_body_armor, "body_armor"),
+                (best_leg_armor, "leg_armor"),
+                (best_boots, "boots"),
+                (best_shield, "shield"),
+                (best_rings[0], "ring1"),
+                (best_rings[1], "ring2"),
+                (best_artifacts[0], "artifact1"),
+                (best_artifacts[1], "artifact2"),
+                (best_artifacts[2], "artifact3"),
+                (best_amulet, "amulet")
+            ]
+
+            stuff = []
+
+            for stuff_element, slot in best_possible_stuff:
+                if stuff_element is not None:
+                    code = stuff_element["code"] if isinstance(stuff_element, dict) else stuff_element
+
+                    stuff.append({
+                        "code": code,
+                        "slot": slot,
+                        "quantity": 1
+                    })
+
+            print(stuff)
+
+            await character.equip_stuff(stuff)
+            if character.inventory[0]["code"] != "":
+                await character.deposit()
 
 async def get_best_possible_tool(character, slot, bank, skill):
 
