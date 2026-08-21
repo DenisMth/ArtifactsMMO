@@ -87,6 +87,9 @@ class API:
         with path.open("r", encoding="utf-8") as f:
             return json.load(f)
 
+    async def get_active_events(self):
+        return await self._get("events/active")
+
     async def get_items(self, character, resources):
         return await self._post(f"my/{character.name}/action/bank/withdraw/item", resources)
 

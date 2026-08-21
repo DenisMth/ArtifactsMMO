@@ -1,4 +1,7 @@
 async def get_best_possible_stuff(character, skill=None):
+
+    await character.rest()
+
     async with character.api.bank_lock:
         bank = await character.api.fetch_bank_items()
 
@@ -89,8 +92,6 @@ async def get_best_possible_stuff(character, skill=None):
 
             response = await character.api.get_items(character, bank_withdraw)
             await character._handle_response(response)
-
-            await character.rest()
 
             best_possible_stuff = [
                 (best_weapon, "weapon"),
