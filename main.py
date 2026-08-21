@@ -26,6 +26,7 @@ async def main():
     results = await asyncio.gather(
         *(c.run() for c in controller.characters.values()),
         controller.console(),
+        controller.events_manager(),
         server.serve(),
         return_exceptions=True
     )
