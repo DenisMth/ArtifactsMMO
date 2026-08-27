@@ -56,12 +56,18 @@ class CharactersController:
 
     async def check_events(self):
 
+        print("check_events: getting active events...")
+
         data = await self.api.get_active_events()
+
+        print("check_events: got active events")
 
         active_events = [
             event for event in data["data"]
             if event["code"] in EVENT_PRIORITY
         ]
+
+        print(f"check_events: {len(active_events)} relevant events")
 
         active_events.sort(
             key=lambda event: EVENT_PRIORITY.index(event["code"])
@@ -128,6 +134,8 @@ class CharactersController:
                 event_action,
                 selected_event["content"]["code"]
             )
+
+        print("check_events: DONE")
 
 
     async def execute(self, command: Command):
