@@ -203,4 +203,6 @@ class CharactersController:
             except Exception as e:
                 print(f"Event manager failed: {e}")
 
+            print("Event manager: sleeping 300 seconds...")
             await asyncio.sleep(300)
+            print("Event manager: sleep finished")
