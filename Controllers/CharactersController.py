@@ -184,10 +184,13 @@ class CharactersController:
 
     async def events_manager(self):
 
-        print("Events Manager")
+        print(f"Events Manager START id={id(asyncio.current_task())}")
         while True:
             try:
-                print("Checking events...")
+                print(
+                    f"Checking events... "
+                    f"task={id(asyncio.current_task())}"
+                )
                 await self.check_events()
             except Exception as e:
                 print(f"Event manager failed: {e}")
