@@ -58,7 +58,10 @@ class CharactersController:
 
         data = await self.api.get_active_events()
 
-        active_events = data["data"]
+        active_events = [
+            event for event in data["data"]
+            if event["code"] in EVENT_PRIORITY
+        ]
 
         active_events.sort(
             key=lambda event: EVENT_PRIORITY.index(event["code"])
@@ -74,9 +77,6 @@ class CharactersController:
             selected_event = None
 
             for event in active_events:
-
-                if event['code'] not in EVENT_PRIORITY:
-                    continue
 
                 event_action = None
 
