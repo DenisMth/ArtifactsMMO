@@ -184,8 +184,10 @@ class CharactersController:
 
     async def events_manager(self):
 
+        print("Events Manager")
         while True:
             try:
+                print("Checking events...")
                 await self.check_events()
             except Exception as e:
                 print(f"Event manager failed: {e}")

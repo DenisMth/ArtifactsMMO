@@ -241,7 +241,7 @@ async def get_best_possible_armor_piece(character, slot, bank, best_weapon):
 
         for effect in armor_piece["effects"]:
             if effect["code"] == "hp":
-                score += effect["value"]
+                score += effect["value"]//10
 
             elif effect["code"].startswith("dmg"):
 
@@ -408,7 +408,7 @@ async def get_best_possible_rings(character, bank, best_weapon):
 
         for effect in ring["effects"]:
             if effect["code"] == "hp":
-                score += effect["value"]
+                score += effect["value"]//10
 
             elif effect["code"].startswith("dmg"):
 
@@ -523,7 +523,7 @@ async def get_best_possible_artifacts(character, bank, max_stat):
 
             for effect in artifact["effects"]:
                 if effect["code"] == "hp":
-                    score += effect["value"]
+                    score += effect["value"]//10
 
                 elif effect["code"] == "dmg":
                     score += effect["value"] * 6
@@ -601,7 +601,7 @@ async def get_best_possible_amulet(character, bank, best_weapon):
 
         for effect in amulet["effects"]:
             if effect["code"] == "hp":
-                score += effect["value"]
+                score += effect["value"]//10
 
             elif effect["code"].startswith("dmg"):
 
