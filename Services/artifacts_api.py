@@ -28,6 +28,7 @@ class API:
 
     async def _post(self, endpoint, data=None):
         response = await self.client.post(endpoint, json=data)
+        print(response.json())
         try:
             response.raise_for_status()
         except httpx.HTTPStatusError as e:
@@ -40,6 +41,7 @@ class API:
     
     async def _get(self, endpoint, data=None):
         response = await self.client.get(endpoint, params=data)
+        print(response.json())
         try:
             response.raise_for_status()
         except httpx.HTTPStatusError as e:

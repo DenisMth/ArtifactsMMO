@@ -68,6 +68,7 @@ class CharactersController:
         ]
 
         print(f"check_events: {len(active_events)} relevant events")
+        print(active_events)
 
         active_events.sort(
             key=lambda event: EVENT_PRIORITY.index(event["code"])

@@ -341,47 +341,42 @@ async def get_best_possible_shield(character, slot, bank, sorted_attacks):
            and item["level"] <= character.level
     ]
 
-    sorted_shields = []
+    wanted_shields = []
+    equipped_shield = None
 
-    seen_shields = set()
+    for shield in shields:
 
-    for element, value in sorted_attacks:
+        score = 0
 
-        wanted_shields = [
-            shield
-            for shield in shields
-            if shield["code"] not in seen_shields
-            and any(
-                effect["code"] == f"res_{element}"
-                for effect in shield["effects"]
-            )
-        ]
+        for effect in shield["effects"]:
+            if effect["code"].startswith("res_"):
 
-        wanted_shields.sort(
-            key=lambda shield: (
-                shield["level"],
-                next(
-                    effect["value"]
-                    for effect in shield["effects"]
-                    if effect["code"] == f"res_{element}"
-                ),
-            ),
-            reverse=True,
-        )
+                for element, value in sorted_attacks:
+                    if effect["code"] == f"res_{element}":
+                        score += effect["value"] * value
 
-        if wanted_shields:
-            for shield in wanted_shields:
-                seen_shields.add(shield["code"])
-                sorted_shields.append(shield["code"])
+        shield_data = {
+            "code": shield["code"],
+            "score": score,
+        }
 
+        wanted_shields.append(shield_data)
+
+        if shield["code"] == getattr(character, f"{slot}_slot"):
+            equipped_shield= shield_data
+
+    wanted_shields.sort(
+        key=lambda shield: shield["score"],
+        reverse=True,
+    )
 
     # print(sorted_shields)
     # print(len(sorted_shields))
 
-    for shield in sorted_shields:
-        if any(item["code"] == shield for item in bank) or shield == getattr(character, f"{slot}_slot"):
-            # print(shield)
-            if shield == getattr(character, f"{slot}_slot"):
+    for shield in wanted_shields:
+        if any(item["code"] == shield["code"] for item in bank) or shield["code"] == equipped_shield["code"]:
+            print(shield)
+            if shield["score"] == equipped_shield["score"]:
                 return None
 
             return shield
