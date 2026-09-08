@@ -2,10 +2,10 @@
     "name": "SteveMC",
     "account": "thesparatge",
     "skin": "men3",
-    "level": 41,
-    "xp": 31047,
-    "max_xp": 38600,
-    "gold": 1838,
+    "level": 45,
+    "xp": 20,
+    "max_xp": 47000,
+    "gold": 111,
     "speed": 100,
     "mining_level": 50,
     "mining_xp": 0,
@@ -31,49 +31,49 @@
     "alchemy_level": 1,
     "alchemy_xp": 0,
     "alchemy_max_xp": 150,
-    "hp": 1055,
-    "max_hp": 1055,
+    "hp": 1335,
+    "max_hp": 1335,
     "haste": 12,
-    "critical_strike": 50,
+    "critical_strike": 52,
     "wisdom": 75,
-    "prospecting": 100,
-    "initiative": 325,
-    "threat": 0,
+    "prospecting": 160,
+    "initiative": 585,
+    "threat": 10,
     "attack_fire": 37,
     "attack_earth": 37,
     "attack_water": 0,
     "attack_air": 0,
-    "dmg": 90,
-    "dmg_fire": 25,
-    "dmg_earth": 32,
-    "dmg_water": 15,
-    "dmg_air": 25,
-    "res_fire": 16,
-    "res_earth": 18,
-    "res_water": 10,
-    "res_air": 24,
+    "dmg": 80,
+    "dmg_fire": 50,
+    "dmg_earth": 20,
+    "dmg_water": 23,
+    "dmg_air": 8,
+    "res_fire": 18,
+    "res_earth": 24,
+    "res_water": 16,
+    "res_air": 10,
     "effects": [
         {
             "code": "burn",
             "value": 20
         }
     ],
-    "x": -4,
-    "y": 12,
+    "x": 0,
+    "y": 1,
     "layer": "overworld",
-    "map_id": 871,
-    "cooldown": 46,
-    "cooldown_expiration": "2026-08-27T14:37:54.007Z",
+    "map_id": 322,
+    "cooldown": 5,
+    "cooldown_expiration": "2026-09-08T21:24:52.337Z",
     "weapon_slot": "death_knight_sword",
     "rune_slot": "burn_rune",
     "shield_slot": "gold_shield",
     "helmet_slot": "jester_hat",
-    "body_armor_slot": "royal_skeleton_armor",
+    "body_armor_slot": "bandit_armor",
     "leg_armor_slot": "conjurer_skirt",
-    "boots_slot": "gold_boots",
-    "ring1_slot": "topaz_ring",
-    "ring2_slot": "topaz_ring",
-    "amulet_slot": "topaz_amulet",
+    "boots_slot": "mithril_boots",
+    "ring1_slot": "royal_skeleton_ring",
+    "ring2_slot": "royal_skeleton_ring",
+    "amulet_slot": "greater_ruby_amulet",
     "artifact1_slot": "lich_race_medal",
     "artifact2_slot": "lich_race_trophy",
     "artifact3_slot": "novice_guide",
@@ -82,46 +82,46 @@
     "utility2_slot": "",
     "utility2_slot_quantity": 0,
     "bag_slot": "backpack",
-    "task": "goblin",
+    "task": "bat",
     "task_type": "monsters",
     "task_progress": 0,
-    "task_total": 243,
-    "inventory_max_items": 215,
+    "task_total": 373,
+    "inventory_max_items": 223,
     "inventory": [
         {
             "slot": 1,
-            "code": "corrupted_stone",
-            "quantity": 21
+            "code": "raw_chicken",
+            "quantity": 45
         },
         {
             "slot": 2,
-            "code": "cursed_book",
-            "quantity": 14
+            "code": "feather",
+            "quantity": 10
         },
         {
             "slot": 3,
-            "code": "event_ticket",
-            "quantity": 3
+            "code": "egg",
+            "quantity": 1
         },
         {
             "slot": 4,
-            "code": "lizard_eye",
-            "quantity": 6
+            "code": "",
+            "quantity": 0
         },
         {
             "slot": 5,
-            "code": "lizard_skin",
-            "quantity": 6
+            "code": "",
+            "quantity": 0
         },
         {
             "slot": 6,
-            "code": "strange_ore",
-            "quantity": 27
+            "code": "",
+            "quantity": 0
         },
         {
             "slot": 7,
-            "code": "diamond_stone",
-            "quantity": 1
+            "code": "",
+            "quantity": 0
         },
         {
             "slot": 8,

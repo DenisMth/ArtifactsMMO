@@ -1,31 +1,31 @@
 [
     {
         "code": "raw_chicken",
-        "quantity": 186746
+        "quantity": 223047
     },
     {
         "code": "feather",
-        "quantity": 45834
+        "quantity": 54904
     },
     {
         "code": "ash_wood",
-        "quantity": 2972
+        "quantity": 3080
     },
     {
         "code": "egg",
-        "quantity": 30745
+        "quantity": 36804
     },
     {
         "code": "apple",
-        "quantity": 4702
+        "quantity": 4829
     },
     {
         "code": "sap",
-        "quantity": 11050
+        "quantity": 12355
     },
     {
         "code": "yellow_slimeball",
-        "quantity": 422
+        "quantity": 472
     },
     {
         "code": "green_slimeball",
@@ -33,11 +33,11 @@
     },
     {
         "code": "copper_ore",
-        "quantity": 1397
+        "quantity": 1418
     },
     {
         "code": "topaz_stone",
-        "quantity": 342
+        "quantity": 362
     },
     {
         "code": "sunflower",
@@ -61,11 +61,11 @@
     },
     {
         "code": "ruby_stone",
-        "quantity": 464
+        "quantity": 429
     },
     {
         "code": "emerald_stone",
-        "quantity": 453
+        "quantity": 447
     },
     {
         "code": "copper_bar",
@@ -77,19 +77,19 @@
     },
     {
         "code": "sapphire_stone",
-        "quantity": 365
+        "quantity": 403
     },
     {
         "code": "prime_fabric",
-        "quantity": 20
+        "quantity": 3
     },
     {
         "code": "magical_cure",
-        "quantity": 71
+        "quantity": 48
     },
     {
         "code": "topaz",
-        "quantity": 1
+        "quantity": 8
     },
     {
         "code": "small_health_potion",
@@ -97,7 +97,7 @@
     },
     {
         "code": "blue_slimeball",
-        "quantity": 133
+        "quantity": 174
     },
     {
         "code": "spruce_wood",
@@ -117,11 +117,11 @@
     },
     {
         "code": "raw_beef",
-        "quantity": 6213
+        "quantity": 6300
     },
     {
         "code": "milk_bucket",
-        "quantity": 1389
+        "quantity": 1256
     },
     {
         "code": "red_slimeball",
@@ -129,23 +129,23 @@
     },
     {
         "code": "snake_hide",
-        "quantity": 138
+        "quantity": 244
     },
     {
         "code": "raw_wolf_meat",
-        "quantity": 7917
+        "quantity": 11404
     },
     {
         "code": "wolf_bone",
-        "quantity": 672
+        "quantity": 1273
     },
     {
         "code": "wolf_hair",
-        "quantity": 1530
+        "quantity": 2332
     },
     {
         "code": "birch_wood",
-        "quantity": 1784
+        "quantity": 1882
     },
     {
         "code": "coal",
@@ -153,67 +153,59 @@
     },
     {
         "code": "hardwood_plank",
-        "quantity": 657
+        "quantity": 814
     },
     {
         "code": "steel_bar",
         "quantity": 526
     },
     {
-        "code": "sapphire",
-        "quantity": 2
-    },
-    {
         "code": "mushroom",
-        "quantity": 770
+        "quantity": 788
     },
     {
         "code": "wolf_ears",
-        "quantity": 5
+        "quantity": 38
     },
     {
         "code": "green_cloth",
-        "quantity": 433
+        "quantity": 478
     },
     {
         "code": "astralyte_crystal",
-        "quantity": 23
+        "quantity": 19
     },
     {
         "code": "skeleton_skull",
-        "quantity": 1055
+        "quantity": 1546
     },
     {
         "code": "flying_wing",
-        "quantity": 510
+        "quantity": 565
     },
     {
         "code": "skeleton_bone",
-        "quantity": 603
+        "quantity": 1262
     },
     {
         "code": "raw_porkchop",
-        "quantity": 2350
+        "quantity": 2466
     },
     {
         "code": "lich_tomb_key",
-        "quantity": 1936
+        "quantity": 2475
     },
     {
         "code": "pig_skin",
-        "quantity": 532
+        "quantity": 569
     },
     {
         "code": "jasper_crystal",
-        "quantity": 37
+        "quantity": 41
     },
     {
         "code": "ring_of_the_adept",
         "quantity": 6
-    },
-    {
-        "code": "copper_pickaxe",
-        "quantity": 1
     },
     {
         "code": "shrimp",
@@ -237,35 +229,31 @@
     },
     {
         "code": "ogre_skin",
-        "quantity": 548
+        "quantity": 83
     },
     {
         "code": "ogre_eye",
-        "quantity": 76
+        "quantity": 99
     },
     {
         "code": "spider_leg",
-        "quantity": 203
+        "quantity": 1680
     },
     {
         "code": "hard_leather",
-        "quantity": 110
-    },
-    {
-        "code": "emerald",
-        "quantity": 2
+        "quantity": 104
     },
     {
         "code": "vampire_blood",
-        "quantity": 483
+        "quantity": 1957
     },
     {
         "code": "vampire_tooth",
-        "quantity": 373
+        "quantity": 977
     },
     {
         "code": "event_ticket",
-        "quantity": 1425
+        "quantity": 1962
     },
     {
         "code": "alexandrite",
@@ -273,19 +261,19 @@
     },
     {
         "code": "air_boost_potion",
-        "quantity": 140
+        "quantity": 136
     },
     {
         "code": "nettle_leaf",
-        "quantity": 1929
+        "quantity": 1783
     },
     {
         "code": "gold_ore",
-        "quantity": 3173
+        "quantity": 4097
     },
     {
         "code": "gold_bar",
-        "quantity": 436
+        "quantity": 1149
     },
     {
         "code": "raw_rat_meat",
@@ -305,7 +293,7 @@
     },
     {
         "code": "dreadful_amulet",
-        "quantity": 91
+        "quantity": 93
     },
     {
         "code": "earth_boost_potion",
@@ -313,7 +301,7 @@
     },
     {
         "code": "red_cloth",
-        "quantity": 2080
+        "quantity": 1842
     },
     {
         "code": "iron_axe",
@@ -321,11 +309,11 @@
     },
     {
         "code": "dead_wood",
-        "quantity": 2852
+        "quantity": 3637
     },
     {
         "code": "small_antidote",
-        "quantity": 100
+        "quantity": 386
     },
     {
         "code": "trout",
@@ -333,15 +321,11 @@
     },
     {
         "code": "dead_wood_plank",
-        "quantity": 1960
+        "quantity": 2065
     },
     {
         "code": "cooked_trout",
         "quantity": 4930
-    },
-    {
-        "code": "novice_guide",
-        "quantity": 4
     },
     {
         "code": "spruce_fishing_rod",
@@ -349,7 +333,7 @@
     },
     {
         "code": "full_moon_vampire_cape",
-        "quantity": 108
+        "quantity": 170
     },
     {
         "code": "wooden_stick",
@@ -357,39 +341,39 @@
     },
     {
         "code": "ruby",
-        "quantity": 1
+        "quantity": 13
     },
     {
         "code": "lizard_eye",
-        "quantity": 170
+        "quantity": 487
     },
     {
         "code": "lizard_skin",
-        "quantity": 22
+        "quantity": 318
     },
     {
         "code": "owlbear_hair",
-        "quantity": 1186
+        "quantity": 1690
     },
     {
         "code": "owlbear_claw",
-        "quantity": 437
+        "quantity": 640
     },
     {
         "code": "imp_tail",
-        "quantity": 662
+        "quantity": 7005
     },
     {
         "code": "demoniac_dust",
-        "quantity": 419
+        "quantity": 5290
     },
     {
         "code": "strange_ore",
-        "quantity": 188
+        "quantity": 22
     },
     {
         "code": "diamond_stone",
-        "quantity": 3
+        "quantity": 7
     },
     {
         "code": "rat_hide",
@@ -400,24 +384,12 @@
         "quantity": 150
     },
     {
-        "code": "obsidian_bar",
-        "quantity": 24
-    },
-    {
         "code": "health_potion",
-        "quantity": 650
+        "quantity": 600
     },
     {
         "code": "cyclops_eye",
-        "quantity": 1413
-    },
-    {
-        "code": "greater_dreadful_staff",
-        "quantity": 1
-    },
-    {
-        "code": "emerald_amulet",
-        "quantity": 1
+        "quantity": 1148
     },
     {
         "code": "magic_wizard_hat",
@@ -441,7 +413,7 @@
     },
     {
         "code": "mithril_bar",
-        "quantity": 847
+        "quantity": 748
     },
     {
         "code": "bass",
@@ -461,35 +433,23 @@
     },
     {
         "code": "maple_plank",
-        "quantity": 660
+        "quantity": 614
     },
     {
         "code": "steel_gloves",
         "quantity": 1
     },
     {
-        "code": "burn_rune",
-        "quantity": 1
-    },
-    {
         "code": "old_boots",
-        "quantity": 6
-    },
-    {
-        "code": "wisdom_amulet",
-        "quantity": 3
+        "quantity": 60
     },
     {
         "code": "cowhide",
-        "quantity": 787
-    },
-    {
-        "code": "steel_ring",
-        "quantity": 6
+        "quantity": 817
     },
     {
         "code": "wooden_club",
-        "quantity": 1
+        "quantity": 2
     },
     {
         "code": "corrupted_gem",
@@ -497,15 +457,11 @@
     },
     {
         "code": "demon_horn",
-        "quantity": 59
+        "quantity": 66
     },
     {
         "code": "lost_world_map",
-        "quantity": 3
-    },
-    {
-        "code": "lich_race_medal",
-        "quantity": 3
+        "quantity": 5
     },
     {
         "code": "minor_health_potion",
@@ -528,14 +484,6 @@
         "quantity": 20
     },
     {
-        "code": "steel_pickaxe",
-        "quantity": 1
-    },
-    {
-        "code": "steel_axe",
-        "quantity": 1
-    },
-    {
         "code": "iron_bar",
         "quantity": 51
     },
@@ -552,64 +500,36 @@
         "quantity": 5
     },
     {
-        "code": "piece_of_obsidian",
-        "quantity": 101
-    },
-    {
         "code": "vermin_leather",
-        "quantity": 213
+        "quantity": 200
     },
     {
         "code": "healing_aura_rune",
         "quantity": 2
     },
     {
-        "code": "lizard_boots",
-        "quantity": 1
-    },
-    {
         "code": "goblin_eye",
-        "quantity": 32
+        "quantity": 77
     },
     {
         "code": "goblin_tooth",
-        "quantity": 35
+        "quantity": 141
     },
     {
         "code": "priestess_hideout_key",
-        "quantity": 13
-    },
-    {
-        "code": "tasks_coin",
-        "quantity": 156
+        "quantity": 539
     },
     {
         "code": "steel_fishing_rod",
         "quantity": 1
     },
     {
-        "code": "iron_pickaxe",
-        "quantity": 1
-    },
-    {
-        "code": "magic_wood",
-        "quantity": 137
-    },
-    {
         "code": "magic_sap",
-        "quantity": 23
-    },
-    {
-        "code": "cursed_book",
-        "quantity": 15
+        "quantity": 26
     },
     {
         "code": "corrupted_stone",
-        "quantity": 20
-    },
-    {
-        "code": "diamond",
-        "quantity": 4
+        "quantity": 959
     },
     {
         "code": "golden_shrimp",
@@ -621,34 +541,286 @@
     },
     {
         "code": "golden_egg",
-        "quantity": 7
+        "quantity": 77
+    },
+    {
+        "code": "goblin_guard_foot",
+        "quantity": 75
+    },
+    {
+        "code": "echoless_bat_wing",
+        "quantity": 26
+    },
+    {
+        "code": "perfect_pearl",
+        "quantity": 5
+    },
+    {
+        "code": "gold_boots",
+        "quantity": 5
+    },
+    {
+        "code": "voidstone_axe",
+        "quantity": 1
+    },
+    {
+        "code": "cursed_wood",
+        "quantity": 716
+    },
+    {
+        "code": "gold_ring",
+        "quantity": 10
+    },
+    {
+        "code": "emerald",
+        "quantity": 16
+    },
+    {
+        "code": "sapphire",
+        "quantity": 15
+    },
+    {
+        "code": "royal_skeleton_armor",
+        "quantity": 4
+    },
+    {
+        "code": "iron_pickaxe",
+        "quantity": 1
+    },
+    {
+        "code": "copper_pickaxe",
+        "quantity": 1
+    },
+    {
+        "code": "strangold_bar",
+        "quantity": 33
+    },
+    {
+        "code": "steel_pickaxe",
+        "quantity": 1
+    },
+    {
+        "code": "voidstone_pickaxe",
+        "quantity": 1
+    },
+    {
+        "code": "royal_skeleton_ring",
+        "quantity": 8
+    },
+    {
+        "code": "cursed_plank",
+        "quantity": 265
+    },
+    {
+        "code": "steel_axe",
+        "quantity": 1
+    },
+    {
+        "code": "piece_of_obsidian",
+        "quantity": 115
     },
     {
         "code": "elderwood_staff",
+        "quantity": 2
+    },
+    {
+        "code": "gold_sword",
+        "quantity": 10
+    },
+    {
+        "code": "strangold_sword",
+        "quantity": 2
+    },
+    {
+        "code": "magical_plank",
         "quantity": 1
     },
     {
-        "code": "sapphire_amulet",
+        "code": "royal_skeleton_helmet",
+        "quantity": 4
+    },
+    {
+        "code": "cursed_book",
+        "quantity": 582
+    },
+    {
+        "code": "strangold_helmet",
         "quantity": 1
     },
     {
-        "code": "mithril_platelegs",
+        "code": "conjurer_cloak",
+        "quantity": 4
+    },
+    {
+        "code": "conjurer_skirt",
+        "quantity": 2
+    },
+    {
+        "code": "steel_ring",
+        "quantity": 6
+    },
+    {
+        "code": "wisdom_amulet",
+        "quantity": 3
+    },
+    {
+        "code": "raw_hellhound_meat",
+        "quantity": 339
+    },
+    {
+        "code": "lizard_boots",
+        "quantity": 2
+    },
+    {
+        "code": "royal_skeleton_pants",
+        "quantity": 1
+    },
+    {
+        "code": "strangold_legs_armor",
+        "quantity": 1
+    },
+    {
+        "code": "greater_dreadful_staff",
+        "quantity": 1
+    },
+    {
+        "code": "hellhound_collar",
+        "quantity": 95
+    },
+    {
+        "code": "hellhound_hair",
+        "quantity": 38
+    },
+    {
+        "code": "tasks_coin",
+        "quantity": 49
+    },
+    {
+        "code": "orc_bone",
+        "quantity": 82
+    },
+    {
+        "code": "orc_skin",
+        "quantity": 79
+    },
+    {
+        "code": "white_knight_helmet",
         "quantity": 1
     },
     {
         "code": "death_knight_sword",
+        "quantity": 3
+    },
+    {
+        "code": "strangold_armor",
+        "quantity": 1
+    },
+    {
+        "code": "gold_platebody",
+        "quantity": 1
+    },
+    {
+        "code": "obsidian_battleaxe",
+        "quantity": 1
+    },
+    {
+        "code": "gold_platelegs",
+        "quantity": 1
+    },
+    {
+        "code": "gold_helm",
+        "quantity": 1
+    },
+    {
+        "code": "highwayman_dagger",
         "quantity": 2
     },
     {
-        "code": "goblin_guard_foot",
-        "quantity": 7
+        "code": "forest_ring",
+        "quantity": 1
+    },
+    {
+        "code": "forest_staff",
+        "quantity": 2
+    },
+    {
+        "code": "wolfrider_hair",
+        "quantity": 1006
+    },
+    {
+        "code": "wolfrider_ponytail",
+        "quantity": 1431
+    },
+    {
+        "code": "broken_sword",
+        "quantity": 543
+    },
+    {
+        "code": "lich_crown",
+        "quantity": 1
+    },
+    {
+        "code": "white_knight_armor",
+        "quantity": 2
+    },
+    {
+        "code": "white_knight_pants",
+        "quantity": 2
+    },
+    {
+        "code": "dreadful_battleaxe",
+        "quantity": 1
+    },
+    {
+        "code": "emerald_amulet",
+        "quantity": 1
+    },
+    {
+        "code": "goblin_guard_shield",
+        "quantity": 1
+    },
+    {
+        "code": "mithril_boots",
+        "quantity": 1
+    },
+    {
+        "code": "bandit_armor",
+        "quantity": 1
+    },
+    {
+        "code": "mithril_shield",
+        "quantity": 1
+    },
+    {
+        "code": "emerald_ring",
+        "quantity": 2
+    },
+    {
+        "code": "malefic_cloth",
+        "quantity": 1
+    },
+    {
+        "code": "bat_wing",
+        "quantity": 11
+    },
+    {
+        "code": "bat_heart",
+        "quantity": 10
+    },
+    {
+        "code": "white_knight_shield",
+        "quantity": 2
+    },
+    {
+        "code": "obsidian_bar",
+        "quantity": 275
+    },
+    {
+        "code": "magic_bow",
+        "quantity": 1
     },
     {
         "code": "gold_shield",
         "quantity": 1
-    },
-    {
-        "code": "echoless_bat_wing",
-        "quantity": 50
     }
 ]

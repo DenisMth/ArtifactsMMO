@@ -68,7 +68,7 @@ class CharactersController:
         ]
 
         print(f"check_events: {len(active_events)} relevant events")
-        print(active_events)
+        # print(active_events)
 
         active_events.sort(
             key=lambda event: EVENT_PRIORITY.index(event["code"])
@@ -114,11 +114,11 @@ class CharactersController:
                 if name in self.original_actions:
                     original_action = self.original_actions.pop(name)
 
-                    character.set_action(
+                    await character.set_action(
                         original_action["action"],
                         original_action["target"],
-                        original_action["option"],
-                        original_action["characters"]
+                        original_action["characters"],
+                        original_action["option"]
                     )
 
                 continue
@@ -131,7 +131,7 @@ class CharactersController:
                     "characters": character.characters
                 }
 
-            character.set_action(
+            await character.set_action(
                 event_action,
                 selected_event["content"]["code"]
             )

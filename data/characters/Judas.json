@@ -2,13 +2,13 @@
     "name": "Judas",
     "account": "thesparatge",
     "skin": "men3",
-    "level": 40,
-    "xp": 16210,
-    "max_xp": 36500,
-    "gold": 2321,
+    "level": 45,
+    "xp": 7835,
+    "max_xp": 47000,
+    "gold": 236,
     "speed": 100,
     "mining_level": 41,
-    "mining_xp": 477,
+    "mining_xp": 1793,
     "mining_max_xp": 38600,
     "woodcutting_level": 12,
     "woodcutting_xp": 2,
@@ -31,49 +31,49 @@
     "alchemy_level": 1,
     "alchemy_xp": 0,
     "alchemy_max_xp": 150,
-    "hp": 1130,
-    "max_hp": 1130,
+    "hp": 1445,
+    "max_hp": 1445,
     "haste": 13,
-    "critical_strike": 50,
+    "critical_strike": 42,
     "wisdom": 25,
-    "prospecting": 100,
-    "initiative": 475,
-    "threat": 5,
+    "prospecting": 190,
+    "initiative": 735,
+    "threat": 19,
     "attack_fire": 0,
     "attack_earth": 0,
     "attack_water": 75,
     "attack_air": 0,
-    "dmg": 75,
-    "dmg_fire": 39,
-    "dmg_earth": 25,
-    "dmg_water": 74,
-    "dmg_air": 0,
-    "res_fire": 25,
-    "res_earth": 16,
-    "res_water": 16,
-    "res_air": 25,
+    "dmg": 65,
+    "dmg_fire": 44,
+    "dmg_earth": 30,
+    "dmg_water": 67,
+    "dmg_air": 8,
+    "res_fire": 33,
+    "res_earth": 26,
+    "res_water": 10,
+    "res_air": 17,
     "effects": [
         {
             "code": "burn",
             "value": 20
         }
     ],
-    "x": -4,
-    "y": 12,
+    "x": 0,
+    "y": 1,
     "layer": "overworld",
-    "map_id": 871,
-    "cooldown": 46,
-    "cooldown_expiration": "2026-08-27T14:38:07.022Z",
+    "map_id": 322,
+    "cooldown": 3,
+    "cooldown_expiration": "2026-09-08T21:24:59.294Z",
     "weapon_slot": "diamond_sword",
     "rune_slot": "burn_rune",
     "shield_slot": "gold_shield",
     "helmet_slot": "jester_hat",
-    "body_armor_slot": "bandit_armor",
+    "body_armor_slot": "mithril_platebody",
     "leg_armor_slot": "mithril_platelegs",
-    "boots_slot": "lizard_boots",
-    "ring1_slot": "sapphire_ring",
-    "ring2_slot": "sapphire_ring",
-    "amulet_slot": "sapphire_amulet",
+    "boots_slot": "mithril_boots",
+    "ring1_slot": "royal_skeleton_ring",
+    "ring2_slot": "royal_skeleton_ring",
+    "amulet_slot": "greater_topaz_amulet",
     "artifact1_slot": "novice_guide",
     "artifact2_slot": "lich_race_trophy",
     "artifact3_slot": "lich_race_medal",
@@ -82,36 +82,36 @@
     "utility2_slot": "",
     "utility2_slot_quantity": 0,
     "bag_slot": "backpack",
-    "task": "goblin_guard",
+    "task": "dryad",
     "task_type": "monsters",
     "task_progress": 0,
-    "task_total": 96,
-    "inventory_max_items": 213,
+    "task_total": 231,
+    "inventory_max_items": 223,
     "inventory": [
         {
             "slot": 1,
-            "code": "cursed_wood",
-            "quantity": 48
+            "code": "feather",
+            "quantity": 31
         },
         {
             "slot": 2,
+            "code": "raw_chicken",
+            "quantity": 85
+        },
+        {
+            "slot": 3,
+            "code": "egg",
+            "quantity": 18
+        },
+        {
+            "slot": 4,
             "code": "event_ticket",
             "quantity": 3
         },
         {
-            "slot": 3,
-            "code": "lizard_eye",
-            "quantity": 15
-        },
-        {
-            "slot": 4,
-            "code": "lizard_skin",
-            "quantity": 13
-        },
-        {
             "slot": 5,
-            "code": "strange_ore",
-            "quantity": 27
+            "code": "",
+            "quantity": 0
         },
         {
             "slot": 6,
@@ -188,5 +188,9 @@
             "code": "",
             "quantity": 0
         }
-    ]
+    ],
+    "characters": null,
+    "target_coords": null,
+    "on_target": false,
+    "min_hp_needed": 260
 }

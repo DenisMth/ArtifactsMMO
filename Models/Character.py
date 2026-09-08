@@ -12,6 +12,7 @@ class Character:
         self.action = "init"
         self.target = None
         self.option = None
+        self.characters = None
         self.target_coords = None
         self.on_target = False
         self.min_hp_needed = self.max_hp
