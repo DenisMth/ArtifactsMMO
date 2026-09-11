@@ -87,23 +87,23 @@ class CharactersController:
 
                 event_action = None
 
-                if event["content"]["type"] == "monster":
+                if event["map"]["interactions"]["content"]["type"] == "monster":
                     event_action = "fight"
 
-                if event["content"]["type"] == "resource":
+                if event["map"]["interactions"]["content"]["type"] == "resource":
                     event_action = "gather"
 
                 if event_action is None:
                     continue
 
                 if event_action == "gather":
-                    if event["content"]["code"] == "strange_rocks" and character.mining_level < 35:
+                    if event["map"]["interactions"]["content"]["code"] == "strange_rocks" and character.mining_level < 35:
                         continue
 
-                    if event["content"]["code"] == "magic_tree" and character.woodcutting_level < 35:
+                    if event["map"]["interactions"]["content"]["code"] == "magic_tree" and character.woodcutting_level < 35:
                         continue
 
-                if event["content"]["code"] == character.target:
+                if event["map"]["interactions"]["content"]["code"] == character.target:
                     continue
 
                 selected_event = event
@@ -133,7 +133,7 @@ class CharactersController:
 
             await character.set_action(
                 event_action,
-                selected_event["content"]["code"]
+                selected_event["map"]["interactions"]["content"]["code"]
             )
 
         print("check_events: DONE")
