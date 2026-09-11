@@ -28,7 +28,15 @@ async def get_best_possible_stuff(character, skill=None):
 
             best_weapon = await get_best_possible_weapon(character, "weapon", bank, sorted_resistances)
             best_helmet = await get_best_possible_armor_piece(character,"helmet", bank, best_weapon)
-            best_body_armor = await get_best_possible_armor_piece(character, "body_armor", bank, best_weapon)
+
+            if monster["name"] != "cultist_alchemist":
+                best_body_armor = await get_best_possible_armor_piece(character, "body_armor", bank, best_weapon)
+            else:
+                if character.body_armor_slot != "cultist_cloak":
+                    best_body_armor = "cultist_cloak"
+                else:
+                    best_body_armor = None
+
             best_leg_armor = await get_best_possible_armor_piece(character, "leg_armor", bank, best_weapon)
             best_boots = await get_best_possible_armor_piece(character, "boots", bank, best_weapon)
             best_shield = await get_best_possible_shield(character, "shield", bank, sorted_attacks)
