@@ -144,7 +144,7 @@ class Character:
             if self.target == "task" and self.task_type == "monsters":
                 self.target = self.task
 
-            await get_best_possible_stuff(self)
+            # await get_best_possible_stuff(self)
 
             self.min_hp_needed = await self.fight_hp_needed()
             if self.min_hp_needed < 0:
@@ -184,7 +184,7 @@ class Character:
 
         nb_items_needed = 0
 
-        await get_best_possible_stuff(self,craft_elements["data"]["craft"]["skill"])
+        # await get_best_possible_stuff(self,craft_elements["data"]["craft"]["skill"])
 
         for craft_element in craft_elements["data"]["craft"]["items"]:
             nb_items_needed += craft_element["quantity"]
@@ -212,7 +212,7 @@ class Character:
     async def craft_from_bank(self, quantity=-1):
         # main_target = self.target
 
-        await get_best_possible_stuff(self, "craft")
+        # await get_best_possible_stuff(self, "craft")
 
         craft_elements = await self.api.find_craft_elements(self.target)
 
